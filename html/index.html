@@ -439,7 +439,31 @@
   </form> -->
 
 
-	<h1>설문조사 폼</h1>
+	<!-- <h1>설문조사 폼</h1>
+
+  <pre>
+    1 select & option
+    select는 몇가지 옵션을 제공한다
+
+    - 애트리뷰트
+    1) value - 선택에 대해서 서버에 제출되는 값
+    2) disabled - 엘리먼트를 비활성화 시킨다
+
+    2 textarea
+    여러줄의 텍스트를 입력할 수 있다
+
+    - 애트리뷰트
+    1) cols (columns) - 한 줄에 입력할 수 있는 글자수
+    2) rows - 입력할 수 있는 줄의 수
+
+    3 input type radio
+    라디오 버튼 중에서 한가지만 선택할 수 있다
+    버튼을 그룹화하기 위해 name을 일치시켜야 한다
+
+    - 애트리뷰트
+    1) checked
+    페이지가 로드되었을 때 버튼을 선택된 상태로 만든다
+  </pre>
 
 	<form action="/survey.php">
     <h3>
@@ -467,7 +491,81 @@
     <p>
       <button type="submit">제출</button>
     </p>
-  </form>
+  </form> -->
+
+
+  <!-- <h1>img</h1>
+  <p>image (이미지)</p>
+
+  <pre>
+    애트리뷰트
+
+    1 src (source)
+    이미지의 소스(주소)
+
+    2 alt (alternative)
+    이미지에 대한 설명
+
+    3 width
+    이미지의 넓이
+  </pre>
+
+  <img 
+    src="https://live.staticflickr.com/4158/34512763786_a16577b036_b.jpg" 
+    alt="HTML타투"
+    width="400"
+  > -->
+
+
+  <!-- <h1>svg</h1>
+  <pre>
+    scalable vector graphic의 약자
+    수학적인 방법으로 그래픽을 표현한다
+    확대해도 깨지지 않는다
+    로고나 아이콘 등을 표현할 때 사용된다
+  </pre>
+
+  <svg height="150" width="200">
+    <ellipse 
+      cx="100" 
+      cy="75" 
+      rx="90" 
+      ry="60" 
+      fill="#333" 
+    />
+
+    <text 
+      fill="#fff" 
+      font-size="45" 
+      font-family="Verdana" 
+      x="35" 
+      y="90"
+    >
+      LOGO
+    </text>
+  </svg> -->
+
+
+  <!-- <h1>HTML 엔티티(Entity)</h1>
+  <pre>
+    문서에서 예약된 문자나 이모티콘등을 표현할 때 사용된다
+
+    * 예약된 문자: html 코드로 사용중인 문자
+  </pre>
+
+  <h3>Entity name</h3>
+
+  <ul>
+    <li>1 &lt; 2</li>
+    <li>&copy;</li>
+  </ul>
+
+  <h3>Entity number</h3>
+  <ul>
+    <li>&#128512;</li>
+    <li>&#128128;</li>
+  </ul> -->
+
 
 </body>
 </html>
