@@ -625,7 +625,7 @@
 <h3>top 제외</h3>
 <div class="item border-l border-r border-b">item</div> -->
 
-<h1>outline</h1>
+<!-- <h1>outline</h1>
 <p>border밖의 선</p>
 
 <style>
@@ -646,8 +646,483 @@
   }
 </style>
 
-<div class="item border outline">item</div>
+<div class="item border outline">item</div> -->
 
+
+<!-- <h1>padding</h1>
+<pre>
+  엘리먼트 내부에 추가적인 공간을 생성한다
+  일반적으로 엘리먼트의 크기가 커진다
+</pre>
+
+<style>
+  .item {
+    background-color: #ddd;
+    display: inline-block;
+  }
+
+  .p-4 {
+    padding: 1rem;
+  }
+
+  .pt-4 {
+    padding-top: 1rem;
+  }
+
+  .pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .pl-4 {
+    padding-left: 1rem;
+  }
+  
+  .pr-4 {
+    padding-right: 1rem;
+  }
+</style>
+
+<h3>없음</h3>
+<div class="item">item</div>
+
+<h3>전체</h3>
+<div class="item p-4">item</div>
+
+<h3>top</h3>
+<div class="item pt-4">item</div>
+
+<h3>bottom</h3>
+<div class="item pb-4">item</div>
+
+<h3>left</h3>
+<div class="item pl-4">item</div>
+
+<h3>right</h3>
+<div class="item pr-4">item</div>
+
+<h3>x축</h3>
+<div class="item pl-4 pr-4">item</div>
+
+<h3>y축</h3>
+<div class="item pt-4 pb-4">item</div>
+
+<h3>top 제외</h3>
+<div class="item pr-4 pb-4 pl-4">item</div> -->
+
+
+<!-- <h1>margin</h1>
+<pre>
+  엘리먼트 외부에 공간을 생성한다
+  엘리먼트 사이에 공간을 확보할 때 사용된다
+</pre>
+
+<style>
+  .item {
+    background-color: #ddd;
+    display: inline-block;
+  }
+
+  .m-4 {
+    margin: 1rem;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .ml-4 {
+    margin-left: 1rem;
+  }
+
+  .mr-4 {
+    margin-right: 1rem;
+  }
+</style>
+
+
+<h3>없음</h3>
+<div class="item">item</div>
+
+<h3>전체</h3>
+<div class="item m-4">item</div>
+
+<h3>top</h3>
+<div class="item mt-4">item</div>
+
+<h3>bottom</h3>
+<div class="item mb-4">item</div>
+
+<h3>left</h3>
+<div class="item ml-4">item</div>
+
+<h3>right</h3>
+<div class="item mr-4">item</div>
+
+<h3>x축</h3>
+<div class="item ml-4 mr-4">item</div>
+
+<h3>y축</h3>
+<div class="item mt-4 mb-4">item</div>
+
+<h3>top 제외</h3>
+<div class="item ml-4 mr-4 mb-4">item</div> -->
+
+
+<!-- <h1>Q. padding & margin</h1>
+
+<style>
+  button {
+    /* top/bottom left/right */
+    padding: 0.5rem 0.75rem;
+  }
+
+  .ml-2 {
+    margin-left: 0.5rem;
+  }
+</style>
+
+<h3>저장하시겠습니까?</h3>
+
+<button>저장</button>
+<button class="ml-2">취소</button> -->
+
+
+<!-- <h1>width</h1>
+<p>엘리먼트의 넓이</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .inline-block {
+    display: inline-block;
+  }
+
+  .w-auto {
+    width: auto;
+  }
+
+  .w-16 {
+    width: 4rem;
+  }
+</style>
+
+<h3>display: block</h3>
+
+<p>width: auto</p>
+<div class="item block w-auto">item</div>
+<div class="item block w-auto">item</div>
+<div class="item block w-auto">item</div>
+
+<p>width: 4rem</p>
+<div class="item block w-16">item</div>
+<div class="item block w-16">item</div>
+<div class="item block w-16">item</div>
+
+
+<h3>display: inline-block</h3>
+
+<p>width: auto</p>
+<div class="item inline-block w-auto">item</div>
+<div class="item inline-block w-auto">item</div>
+<div class="item inline-block w-auto">item</div>
+
+<p>width: 4rem</p>
+<div class="item inline-block w-16">item</div>
+<div class="item inline-block w-16">item</div>
+<div class="item inline-block w-16">item</div> -->
+
+
+<!-- <h1>min width</h1>
+<p>엘리먼트의 최소 넓이</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+  }
+  
+  .min-w-600px {
+    min-width: 600px;
+  }
+</style>
+
+<h3>min-width: 600px</h3>
+
+<div class="item min-w-600px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Possimus illo cum expedita perspiciatis. 
+  Autem aut, perspiciatis facilis quo labore alias vel nisi, 
+  laborum iusto distinctio eos assumenda ut nulla repellat.
+</div> -->
+
+
+<!-- <h1>max width</h1>
+<p>엘리먼트의 최대 넓이</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+  }
+
+  .max-w-600px {
+    max-width: 600px;
+  }
+</style>
+
+<h3>max-width: 600px</h3>
+
+<div class="item max-w-600px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Possimus illo cum expedita perspiciatis. 
+  Autem aut, perspiciatis facilis quo labore alias vel nisi, 
+  laborum iusto distinctio eos assumenda ut nulla repellat.
+</div> -->
+
+
+<!-- <h1>height</h1>
+<p>엘리먼트의 높이</p>
+
+<style>
+  .item {
+     background-color: #ddd;
+  }
+  
+  .h-auto {
+    /* 컨텐츠에 필요한 만큼 높이를 갖는다 */
+    height: auto;
+  }
+
+  .h-32 {
+    height: 8rem;
+  }
+</style>
+
+<h3>height: auto</h3>
+
+<div class="item h-auto">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Asperiores consectetur officiis possimus magni, ullam, 
+  aspernatur nesciunt voluptatibus ducimus perspiciatis 
+  voluptates fugiat quis doloribus consequuntur suscipit eius? 
+  Ullam nam corrupti ipsam.
+</div>
+
+<h3>height: 8rem</h3>
+
+<div class="item h-32">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Asperiores consectetur officiis possimus magni, ullam, 
+  aspernatur nesciunt voluptatibus ducimus perspiciatis 
+  voluptates fugiat quis doloribus consequuntur suscipit eius? 
+  Ullam nam corrupti ipsam.
+</div> -->
+
+
+<!-- <h1>min height</h1>
+<p>엘리먼트의 최소 높이</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+  }
+  
+  .min-h-50px {
+    min-height: 50px;
+  }
+</style>
+
+<h3>min-height: 50px</h3>
+
+<div class="item min-h-50px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+</div>
+
+<h3>min-height: 50px</h3>
+
+<div class="item min-h-50px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Possimus illo cum expedita perspiciatis. 
+  Autem aut, perspiciatis facilis quo labore alias vel nisi, 
+  laborum iusto distinctio eos assumenda ut nulla repellat.
+</div> -->
+
+
+<!-- <h1>max height</h1>
+<p>엘리먼트의 최대 높이</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+  }
+  
+  .max-h-50px {
+    max-height: 50px;
+  }
+</style>
+
+<h3>max-height: 50px</h3>
+
+<div class="item max-h-50px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+</div>
+
+<h3>max-height: 50px</h3>
+
+<div class="item max-h-50px">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Possimus illo cum expedita perspiciatis. 
+  Autem aut, perspiciatis facilis quo labore alias vel nisi, 
+  laborum iusto distinctio eos assumenda ut nulla repellat.
+</div> -->
+
+
+<!-- <h1>Q. Display, width & height</h1>
+
+<style>
+  #ireland .item {
+    width: 50px;
+    height: 100px;
+    display: inline-block;
+  }
+
+  #netherlands .item {
+    width: 160px;
+    height: 40px;
+    display: block;
+  }
+
+  .bg-green {
+    background-color: green;
+  }
+
+  .bg-white {
+    background-color: #fff;
+  }
+
+  .bg-gold {
+    background-color: gold;
+  }
+
+  .bg-red {
+    background-color: red;
+  }
+
+  .bg-blue {
+    background-color: blue;
+  }
+</style>
+
+<h3>Ireland</h3>
+<p>colors: green, white, gold</p>
+
+<div id="ireland">
+  <div class="item bg-green"></div>
+  <div class="item bg-white"></div>
+  <div class="item bg-gold"></div>
+</div>
+
+<h3>Netherlands</h3>
+<p>colors: red, white, blue</p>
+
+<div id="netherlands">
+  <div class="item bg-red"></div>
+  <div class="item bg-white"></div>
+  <div class="item bg-blue"></div>
+</div> -->
+
+
+<!-- <h1>box-sizing</h1>
+<p>엘리먼트의 크기 조절</p>
+
+<style>
+  .item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    padding: 0.5rem;
+    background-color: #ddd;
+  }
+
+  .content-box {
+    /* 
+      padding과 border가 주어진 크기 밖으로 적용된다
+    */
+    box-sizing: content-box;
+  }
+
+  .border-box {
+    /* 
+      padding과 border가 주어진 크기 안으로 적용된다
+      사이즈를 조작하는 것이 더 편리하기 때문에 추천되는 방식
+    */
+    box-sizing: border-box;
+  }
+</style>
+
+<h3>box sizing: content box</h3>
+<div class="item content-box">118 x 118</div>
+
+<h3>box sizing: border box</h3>
+<div class="item border-box">100 x 100</div> -->
+
+
+<h1>overflow</h1>
+<p>넘치는 컨텐츠 처리 방법</p>
+
+<style>
+  .container {
+    border: 1px solid;
+    width: 200px;
+    height: 100px;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-auto {
+    /* 
+      overflow(넘침)가 발생했을 때
+      스크롤을 생성한다
+    */
+    overflow: auto;
+  }
+
+  .overflow-visible {
+    /* 보이는 상태 그대로 둔다 */
+    overflow: visible;
+  }
+</style>
+
+<h3>overflow: hidden</h3>
+<div class="container overflow-hidden">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+  Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+  et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+</div>
+
+<h3>overflow: auto</h3>
+<div class="container overflow-auto">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+  Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+  et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+</div>
+
+<h3>overflow: visible</h3>
+<div class="container overflow-visible">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+  Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
+  et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
+</div>  
 
 </body>
 
