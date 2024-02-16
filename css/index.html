@@ -1075,7 +1075,7 @@
 <div class="item border-box">100 x 100</div> -->
 
 
-<h1>overflow</h1>
+<!-- <h1>overflow</h1>
 <p>넘치는 컨텐츠 처리 방법</p>
 
 <style>
@@ -1122,7 +1122,415 @@
   Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
   Hic maxime soluta provident nihil dolore accusamus, vitae adipisci, 
   et repudiandae, eum aliquid inventore ratione blanditiis harum officia animi corrupti eligendi facere.
-</div>  
+</div>   -->
+
+
+<!-- <h1>white space</h1>
+<p>여백 처리 방법</p>
+
+<style>
+  .container {
+    border: 1px solid;
+    width: 150px;
+  }
+
+  .item {
+    display: inline-block;
+    width: 100px; 
+    background-color: #ddd;
+  }
+
+  .whitespace-normal {
+    /* 
+      컨테이너가 아이템을 감싼다(wrap)
+
+      wrap - 컨테이너의 넓이가 부족할 때
+      아이템을 아래로 떨어뜨린다
+    */
+    white-space: normal;
+  }
+
+  .whitespace-nowrap {
+    /* 
+      컨테이너가 아이템을 감싸지 않는다
+    */
+    white-space: nowrap;
+  }
+</style>
+
+<h3>white space: normal</h3>
+
+<div class="container whitespace-normal">
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+</div>
+
+<h3>white space: nowrap</h3>
+
+<div class="container whitespace-nowrap">
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+</div> -->
+
+
+<!-- <h1>position</h1>
+<pre>
+  아이템을 위치시키는 방법
+
+  1 static
+  2 relative
+  3 absolute
+  4 fixed
+</pre> -->
+
+
+<!-- <h1>position: static</h1>
+<p>
+  엘리먼트가 움직이지 않는다(static)
+</p>
+
+<style>
+  .item {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 0.5rem;
+  }
+  
+  .static {
+    /* 대부분 엘리먼트의 기본값 */
+    position: static;
+  }
+</style>
+
+<div class="item static">item</div>
+<div class="item static">item</div>
+<div class="item static">item</div> -->
+
+
+<!-- <h1>position: relative</h1>
+<p>
+  엘리먼트가 자신의 원래 위치를 기준으로 위치한다
+</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .top-2 {
+    /* 아래로 이동 */
+    top: 0.5rem;
+  }
+
+  .left-2 {
+    /* 오른쪽으로 이동 */
+    left: 0.5rem;
+  }
+</style>
+
+<div class="item">item</div>
+<div class="item relative top-2 left-2">item</div>
+<div class="item">item</div> -->
+
+
+<!-- <h1>position: absolute</h1>
+<p>
+  엘리먼트가 relative부모를 기준으로 위치한다
+</p>
+
+<style>
+  .container {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .item {
+    background-color: #ddd;
+    padding: 0.5rem;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+
+  .top-0 {
+    top: 0;
+  }
+
+  .left-0 {
+    left: 0;
+  }
+
+  .bottom-0 {
+    bottom: 0;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+</style>
+
+<div class="container relative">
+  <div class="item absolute top-0 left-0">item 1</div>
+  <div class="item absolute top-0 right-0">item 2</div>
+  <div class="item absolute bottom-0 right-0">item 3</div>
+  <div class="item absolute bottom-0 left-0">item 4</div>
+</div> -->
+
+
+<!-- <h1>position: fixed</h1>
+<p>
+  엘리먼트가 뷰포트를 기준으로 위치한다
+</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+    padding: 0.5rem;
+  }
+  
+  .fixed {
+    position: fixed;
+  }
+
+  .top-0 {
+    top: 0;
+  }
+
+  .left-0 {
+    left: 0;
+  }
+
+  .bottom-0 {
+    bottom: 0;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+</style>
+
+<div class="item fixed top-0 left-0">item 1</div>
+<div class="item fixed top-0 right-0">item 2</div>
+<div class="item fixed bottom-0 right-0">item 3</div>
+<div class="item fixed bottom-0 left-0">item 4</div> -->
+
+
+<!-- <h1>Q. position</h1>
+
+<style>
+  .container {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+  }
+
+  .item {
+    width: 50px; 
+    height: 50px;
+    background-color: #000;
+  }
+  
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .top-0 {
+    top: 0;
+  }
+
+  .left-0 {
+    left: 0;
+  }
+
+  .bottom-0 {
+    bottom: 0;
+  }
+  
+  .right-0 {
+    right: 0;
+  }
+
+  .top-25px {
+    top: 25px;
+  }
+
+  .left-25px {
+    left: 25px;
+  }
+</style>
+
+<h3>check</h3>
+<div class="container relative">
+  <div class="item absolute top-0 left-0"></div>
+  <div class="item absolute right-0 bottom-0"></div>
+</div>
+
+<h3>center</h3>
+<div class="container">
+  <div class="item relative top-25px left-25px"></div>
+</div> -->
+
+
+<!-- <h1>transform</h1>
+<p>엘리먼트를 변형시킨다</p>
+
+<style>
+  .item {
+    background-color: #ddd;
+    width: 100px;
+    height: 100px;
+  }
+
+  .transform-none {
+    /* 기본값. 변형 없음 */
+    transform: none;
+  }
+
+  .translate-4 {
+    /* 
+      translate(left, top)
+      엘리먼트가 자신의 원래 위치를 기준으로 움직인다
+    */
+    transform: translate(10px, 10px);
+  }
+
+  .scale-110 {
+    /* 
+      scale(조정값)
+      엘리먼트의 크기를 조정한다
+    */
+    transform: scale(1.1);
+  }
+
+  .rotate-12 {
+    /* 
+      rotate(각도)
+      엘리먼트를 회전시킨다
+    */
+    transform: rotate(12deg);
+  }
+</style>
+
+
+<h3>transform: none</h3>
+<div class="item transform-none"></div>
+
+<h3>transform: translate</h3>
+<div class="item translate-4"></div>
+
+<h3>transform: scale</h3>
+<div class="item scale-110"></div>
+
+<h3>transform: rotate</h3>
+<div class="item rotate-12"></div> -->
+
+
+<!-- <h1>object fit</h1>
+<p>
+  이미지 맞춤 조절
+</p>
+
+<style>
+  img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+  }
+
+  .object-fill {
+    /* 
+      이미지가 주어진 공간을 채운다
+      이미지의 비율이 주어진 비율로 바뀐다
+      이미지가 늘어나거나 줄어들 수 있다
+    */
+    object-fit: fill;
+  }
+
+  .object-contain {
+    /* 
+      이미지가 원본 비율을 유지한다
+      남는 공간이 생길 수 있다
+    */
+    object-fit: contain;
+  }
+
+  .object-cover {
+    /* 
+      이미지가 주어진 공간을 채운다
+      이미지가 원본 비율을 유지한다
+      이미지가 잘릴 수 있다
+     */
+    object-fit: cover;
+  }
+</style>
+
+
+<h3>object fit: fill (default)</h3>
+<img class="object-fill" src="https://tvvmvn.github.io/front-end/img/homies.jpg" alt="">
+
+<h3>object fit: cover</h3>
+<img class="object-cover" src="https://tvvmvn.github.io/front-end/img/homies.jpg" alt="">
+
+<h3>object fit: contain</h3>
+<img class="object-contain" src="https://tvvmvn.github.io/front-end/img/homies.jpg" alt=""> -->
+
+
+<!-- <h1>background image</h1>
+<p>엘리먼트의 배경 이미지</p>
+
+<style>
+  .container {
+    width: 200px;
+    height: 200px;
+    color: #fff;
+  }
+
+  .bg-image {
+    /* 이미지 소스(주소) */
+    background-image: url("https://tvvmvn.github.io/front-end/img/homies.jpg");
+    /* 
+      background-size: cover
+
+      이미지가 주어진 공간을 채운다
+      이미지가 원본 비율을 유지한다
+      이미지가 잘릴 수 있다
+    */
+
+    background-size: cover;
+    /* 
+      background-position: center
+
+      이미지의 중심이 컨테이너에 보여진다
+    */
+    background-position: center;
+  }
+</style>
+
+<div class="container bg-image">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Laboriosam eos harum maiores possimus, 
+  dolorum rem facere reprehenderit autem inventore neque veniam 
+  aspernatur aperiam mollitia quo voluptatibus expedita, 
+  quasi, numquam velit.
+</div> -->
 
 </body>
 
