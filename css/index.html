@@ -2213,7 +2213,7 @@
 </div> -->
 
 
-<h1>flex order</h1>
+<!-- <h1>flex order</h1>
 <p>아이템의 배열 순서</p>
 
 <style> 
@@ -2254,7 +2254,358 @@
   <div class="item order-3">item 2</div>
   <div class="item order-none">item 3</div>
   <div class="item order-1">item 4</div>
-</div>
+</div> -->
+
+
+<!-- <h1>grid</h1>
+<p>그리드 아이템과 아이템 병합을 활용하여 다양한 레이아웃을 만들 수 있다</p>
+
+<pre>
+  1 그리드 기본형
+  2 그리드 아이템 병합
+</pre> -->
+
+
+<!-- <h1>grid 기본형</h1>
+
+<style>
+  .container {
+    border: 1px solid;
+  }
+
+  .grid {
+    /* grid 컨테이너 */
+    display: grid;
+  }
+  
+  .grid-cols-3 {
+    /* repeat(컬럼갯수, minmax 함수) */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .gap-2 {
+    /* 아이템 사이의 공간 */
+    gap: 0.5rem;
+  }
+
+  /* grid 아이템 */
+  .item {
+    background-color: #ddd;
+    padding: 0.5rem;
+  }
+</style>
+
+<div class="container grid grid-cols-3 gap-2">
+  <div class="item">item 1</div>
+  <div class="item">item 2</div>
+  <div class="item">item 3</div>
+  <div class="item">item 4</div>
+  <div class="item">item 5</div>
+  <div class="item">item 6</div>
+  <div class="item">item 7</div>
+  <div class="item">item 8</div>
+  <div class="item">item 9</div>
+</div> -->
+
+
+<!-- <h1>grid 아이템 병합</h1>
+
+<style>
+  .container {
+    border: 1px solid;
+  }
+  
+  .grid {
+    display: grid;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .gap-2 {
+    gap: 0.5rem;
+  }
+  
+  .item {
+    padding: 0.5rem;
+    background-color: #ddd;
+  }
+  
+  .col-span-2 {
+    /* span + 병합할 컬럼 수 */
+    grid-column-start: span 2;
+  }
+</style>
+
+<div class="container grid gap-2 grid-cols-3">
+  <div class="item">item 1</div>
+  <div class="item">item 2</div>
+  <div class="item">item 3</div>
+  <div class="item col-span-2">item 4</div>
+  <div class="item">item 5</div>
+  <div class="item">item 6</div>
+  <div class="item col-span-2">item 7</div>
+</div> -->
+
+
+<!-- <h1>Q. grid</h1>
+
+<style>    
+  .grid {
+    display: grid;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .gap-2 {
+    gap: 0.5rem;
+  }
+
+  .item {
+    padding: 0.5rem;
+    background-color: #ddd;
+  }
+
+  .col-span-2 {
+    grid-column-start: span 2;
+  }
+
+  .col-span-4 {
+    grid-column-start: span 4;
+  }
+</style>
+
+<div class="container grid gap-2 grid-cols-4">
+  <div class="item col-span-2">item</div>
+  <div class="item col-span-2">item</div>
+  <div class="item col-span-4">item</div>
+  <div class="item">item</div>
+  <div class="item col-span-2">item</div>
+  <div class="item">item</div>
+</div> -->
+
+
+<!-- <h1>가상 엘리먼트</h1>
+
+<pre>
+  CSS에서 정의된 컨텐츠
+  HTML 트리상에 존재하지 않는다
+  코드의 재사용성을 증가시킨다
+
+  1 사용방법
+  선택자::가상 엘리먼트
+
+  2 종류
+  1) before - 가상 엘리먼트가 선택자의 컨텐츠 앞에 위치한다
+  2) after - 가상 엘리먼트가 선택자의 컨텐츠 뒤에 위치한다
+  3) marker - 가상 엘리먼트가 before 앞에 위치한다
+</pre>
+
+<style>
+  li::after {
+    content: "%";
+  }
+</style>
+
+<ul>
+  <li>0</li>
+  <li>50</li>
+  <li>100</li>
+</ul> -->
+
+
+<!-- <h1>initial, inherit</h1>
+
+<pre>
+  상속과 관련된 키워드
+  모든 속성의 값이 될 수있다
+
+  1 inherit
+  부모로부터 속성값을 물려받는다
+
+  2 initial
+  상속받은 속성값을 초기화한다
+</pre>
+
+<style>
+  ul {
+    color: #888;
+  }
+
+  .inherit {
+    color: inherit;
+  }
+
+  .initial {
+    color: initial;
+  }
+</style>
+
+<h1>dsf</h1>
+
+<ul>
+  <li>list item</li>
+  <li class="inherit">list item (inherit)</li>
+  <li class="initial">list item (initial)</li>
+</ul> -->
+
+
+<!-- <h1>CSS 변수</h1>
+
+<style>
+  /* root element */
+  :root {
+    --midnight: rgb(4, 15, 53);
+  }
+
+  ul {
+    background-color: var(--midnight);
+    color: #fff;
+  }
+</style>
+
+<ul>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+</ul> -->
+
+<!-- <h1>반응형 레이아웃</h1>
+<pre>
+  화면의 크기에 따라 레이아웃을 바꾼다
+  media 쿼리를 사용하여 레이아웃 기준점을 설정한다
+</pre>
+
+<style>
+  .item {
+    background-color: #ddd;
+    padding: 0.5rem;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .gap-2 {
+    gap: 0.5rem;
+  }
+
+  /* base */
+  .grid-cols-n {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 640px) {
+    .grid-cols-n {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid-cols-n {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-cols-n {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .grid-cols-n {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .grid-cols-n {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<h3>Layout 기준점</h3>
+<ul>
+  <li>S: 641px - 767px</li>
+  <li>M: 768px - 1023px</li>
+  <li>L: 1024px - 1279px</li>
+  <li>XL: 1280px - 1535px</li>
+  <li>XXL: 1536px - </li>
+</ul>
+
+<div class="container grid gap-2 grid-cols-n">
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+</div> -->
+
+
+  <!-- <h1>Q. Breakpoints</h1>
+  <p>It has 3 columns from medium size</p>
+
+  <style>
+    .grid {
+      display: grid;
+    }
+    
+    .grid-cols-n {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .grid-cols-n {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
+
+  <div class="grid grid-cols-n gap-4">
+    <div class="item">
+      <h3>section 1</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Velit incidunt, quisquam consequatur, obcaecati repudiandae 
+        consequuntur ipsam a in optio culpa placeat quae libero quaerat 
+        nihil soluta dolores natus nobis quasi.
+      </p>
+    </div>
+
+    <div class="item">
+      <h3>section 2</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Velit incidunt, quisquam consequatur, obcaecati repudiandae 
+        consequuntur ipsam a in optio culpa placeat quae libero quaerat 
+        nihil soluta dolores natus nobis quasi.
+      </p>
+    </div>
+
+    <div class="item">
+      <h3>section 3</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Velit incidunt, quisquam consequatur, obcaecati repudiandae 
+        consequuntur ipsam a in optio culpa placeat quae libero quaerat 
+        nihil soluta dolores natus nobis quasi.
+      </p>
+    </div>
+  </div> -->
 
 
 
