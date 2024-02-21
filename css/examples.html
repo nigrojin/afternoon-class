@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<h1>파일 업로드 버튼</h1>
+	<!-- <h1>파일 업로드 버튼</h1>
 
 	<style>
 		#file-input {
@@ -60,7 +60,242 @@
 		<span class="text">
 			Choose File(s)
 		</span>
-	</label>
+	</label> -->
+
+
+	<!-- <h1>풀사이즈 버튼</h1>
+
+	<style>
+		.btn {
+			padding: 0.5rem;
+			border: 1px solid #888;
+			/* 투명하게 */
+			background-color: transparent;
+			color: #888;
+			font-size: 1rem;
+			border-radius: 20px;
+			/* 풀사이즈 */
+			width: 100%;
+			/* 레이아웃 */
+			display: flex;
+			justify-content: center;
+			/* 손가락 모양 커서 */
+			cursor: pointer;
+		}
+
+		.icon {
+			width: 1rem;
+			margin-left: 0.5rem;
+			fill: #888;
+		}
+
+		/* 버튼에 호버했을 때 효과 */
+		.btn:hover {
+			background-color: #eee;
+		}
+	</style>
+
+	<button class="btn">
+		<span>Show more</span>
+		<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+			<path
+				d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+		</svg>
+	</button> -->
+
+
+	<!-- <h1>드랍다운</h1>
+
+	<style>
+		.container {
+			/* border: 1px dashed; */
+			display: inline-block;
+		}
+
+		.btn {
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+		.content {
+			/* 기본값 제거 */
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			/* 사이즈 */
+			width: 12rem;
+			/* design */
+			border: 1px solid #ddd;
+			background-color: #fff;
+			/* 처음에 안보이는 상태 */
+			display: none;
+			/* 떠있는 형태를 만든다 */
+			position: absolute;
+		}
+
+		/* 버튼에 호버했을 때 컨텐츠가 나타난다 */
+		.container:hover .content {
+			display: block;
+		}
+
+		.link  {
+			display: block;
+			color: #000;
+			padding: 0.5rem;
+		}
+
+		.link:hover {
+			background-color: #eee;
+		}
+	</style>
+
+	<div class="container">
+    <button class="btn">Dropdown</button>
+    <ul class="content">
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </div>
+
+  <p>..</p> -->
+
+
+	<!-- <style>
+		.container {
+			/* border: 1px dashed; */
+			width: 12rem;
+		}
+
+		.select {
+			width: inherit;
+			display: flex;
+			justify-content: space-between;
+			/* design */
+			background-color: transparent;
+			border: 1px solid #ccc;
+			padding: 0.5rem;
+			font-size: 1rem;
+		}
+
+		.icon {
+			width: 0.75rem;
+		}
+
+		.content {
+			/* 기본값 제거 */
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			/* size */
+			width: inherit;
+			box-sizing: border-box;
+			/* design */
+			border: 1px solid #ccc;
+			/* 덮어쓰기 */
+			border-top: none;
+			background-color: #fff;
+			/* 떠있는 형태 */
+			position: absolute;
+			/* 처음에 안보이는 상태 */
+			display: none;
+		}
+
+		/* 셀렉트에 호버했을 때 컨텐츠를 나타나게 한다 */
+		.container:hover .content {
+			display: block;
+		}
+
+		.content li {
+			padding: 0.5rem;
+		}
+
+		.content li:hover {
+			background-color: #eee;
+		}
+	</style>
+
+	<h1>Dropdown Select</h1>
+
+	<div class="container">
+    <button class="select">
+      <span>Car Manufacturer</span>
+      <svg 
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 320 512"
+      >
+        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+      </svg>
+    </button>
+
+    <ul class="content">
+      <li>Volvo</li>
+      <li>Hyundai</li>
+      <li>Toyota</li>
+    </ul>
+  </div>
+
+  <p>..</p> -->
+
+
+
+	<h1>필터 버튼</h1>
+
+	<style>
+		nav {
+			/* border: 1px dashed; */
+			width: 24rem;
+			/* 버튼을 감싸지 않는다 */
+			white-space: nowrap;
+			overflow-x: auto;
+		}
+
+		.btn {
+      /* size */
+      padding: 0.5rem 1rem;
+      /* design */
+      border: none;
+      background-color: #333;
+      color: #fff;
+      margin: 0 0.25rem;
+			/* 계산하기 번거로울 때 큰 값을 적용한다 */
+      border-radius: 99px;
+      font-size: 1rem;
+    }
+
+		/* 크롬, 사파리, 오페라에서 스크롤바 숨기기 */
+		nav::-webkit-scrollbar {
+      display: none;
+    }
+
+		/* IE, 엣지, 파이어폭스에서 숨기기 */
+		nav {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+	</style>
+
+	<nav>
+    <button class="btn">London</button>
+    <button class="btn">New York</button>
+    <button class="btn">Amsterdam</button>
+    <button class="btn">Berlin</button>
+    <button class="btn">Seoul</button>
+    <button class="btn">Tokyo</button>
+    <button class="btn">Taipei</button>
+  </nav>
 
 
     
