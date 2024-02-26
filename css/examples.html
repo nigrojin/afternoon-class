@@ -784,6 +784,345 @@
     <h1>Side Bar</h1>
     <p>..</p>
   </main> -->
+
+
+  <!-- <style>
+		.side-bar {
+			/* border: 1px dashed; */
+			width: 16rem;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			/* design */
+			background-color: #333;
+			color: #fff;
+		}
+
+		.logo {
+			padding: 1rem;
+		}
+
+		ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link {
+      display: block;
+      padding: 1rem;
+      color: #fff;
+    }
+
+    .link:hover {
+      background-color: #222;
+    }
+
+		.drop-btn {
+			/* layout */
+			display: block;
+      /* size */
+      width: 100%;
+      padding: 1rem;
+      /* design */
+      text-align: left;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
+      /* misc (miscellaneous, 잡다한 것들) */
+      cursor: pointer;
+		}
+
+		.drop-btn:hover {
+      background-color: #222;
+    }
+
+		.drop-content {
+      padding: 0 1rem;
+      display: none;
+    }
+
+    .drop-container:hover .drop-content {
+      display: block;
+    }
+
+    .drop-link {
+      display: block;
+      color: #888;
+      padding: 0.5rem;
+    }
+    
+    .drop-link:hover {
+      background-color: #eee;
+    }
+
+		main {
+			margin-left: 16rem;
+			padding: 0 1rem;
+		}
+	</style>
+
+	<nav class="side-bar">
+    <h1 class="logo">LOGO</h1>
+    <ul>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <div class="drop-container">
+          <button class="drop-btn">Dropdown</button>
+          <ul class="drop-content">
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+            <li>
+              <a href="#" class="drop-link">Link</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>Side Bar</h1>
+    <p>..</p>
+  </main> -->
+
+
+	<!-- <style>    
+    header {
+      /* fixed */
+      position: fixed;
+      top: 0;
+      left: 0;
+			/* 
+				z-index
+				포지션 경쟁이 발생할 때
+				값이 높을 수록 우선순위를 가진다
+				기본값은 0
+			*/
+      z-index: 1;
+      /* size */
+      width: 100%;
+      height: 4rem;
+      /* design */
+      padding-left: 1rem;
+      background-color: #111;
+      color: #fff;
+      /* layout */
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      margin: 0;
+    }
+
+    .side-bar {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 16rem;
+      height: 100%;
+      /* design */
+      border-right: 1px solid #ddd;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      margin-top: 6rem;
+      padding: 0;
+    }
+
+    .link {
+      display: block;
+      padding: 0.75rem;
+      color: #000;
+    }
+
+    .active {
+      background-color: #eee;
+    }
+
+    main {
+      margin-top: 6rem;
+      margin-left: 16rem;
+      padding: 0 1rem;
+    }
+  </style>
+
+  <header>
+    <h3 class="logo">Dashboard</h3>
+  </header>
+
+  <nav class="side-bar">
+    <ul>
+      <li>
+        <a href="#" class="link active">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+      <li>
+        <a href="#" class="link">Link</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h1>Contents</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Quod commodi tenetur ullam quidem at maxime quam sint! 
+      Dolore consequatur sequi architecto atque ducimus error nesciunt, 
+      illo autem repudiandae, culpa eaque.
+    </p>
+  </main> -->
+
+
+
+	<!-- <h1>검색폼</h1>
+
+	<style>
+		.container {
+			/* border: 1px dashed; */
+			width: 24rem;
+			/* 
+				display가 block일 때 margin x값을 auto로 하게되면
+				엘리먼트가 가운데에 위치한다
+			*/
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.search-input {
+			/* size */
+      width: inherit;
+      /* design */
+      border: 1px solid #ddd;
+      padding: 0.5rem 2.5rem;
+      font-size: 1rem;
+      border-radius: 99px;
+			outline: none;
+		}
+
+		.icon {
+			width: 1rem;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 1rem;
+			fill: #888;
+		}
+	</style>
+
+	<div class="container">
+    <input 
+      type="search" 
+      class="search-input"
+      placeholder="Search Google" 
+      name="q" 
+      autocomplete="off"
+    >
+    <svg 
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 512 512"
+    >
+      <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+    </svg>
+  </div> -->
+
+	<style>
+		.container {
+			/* border: 1px dashed; */
+			width: 300px;
+			/* top left/right bottom */
+			margin: 100px auto 0;
+		}
+
+		.title {
+			text-align: center;
+		}
+
+		.form-group {
+			margin-bottom: 0.5rem;
+		}
+
+		label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+		.username-input, .password-input {
+			width: 100%;
+			padding: 0.5rem;
+			box-sizing: border-box;
+			border: 1px solid #ddd;
+			font-size: 1rem;
+		}
+
+		.btn {
+      /* size */
+      width: 100%;
+      padding: 0.5rem;
+      /* layout */
+      margin-bottom: 0.5rem;
+      /* design */
+      background-color: #333;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      /* misc */
+      cursor: pointer;
+    }
+
+		.login-menu {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.link {
+			color: #000;
+		}
+	</style>
+
+
+	<div class="container">
+    <h2 class="title">Login</h2>
+    
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="username-input" id="username" value="testuser">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="password-input" id="password" value="shhhh">
+    </div>
+    
+    <button type="submit" class="btn">Login</button>
+    
+    <div class="login-menu">
+      <a href="#" class="link">Sign Up</a>
+      <a href="#" class="link">Forgot Password?</a>
+    </div>
+  </div>
+
+
     
 </body>
 </html>
