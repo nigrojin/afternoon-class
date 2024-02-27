@@ -1045,7 +1045,7 @@
     </svg>
   </div> -->
 
-	<style>
+	<!-- <style>
 		.container {
 			/* border: 1px dashed; */
 			width: 300px;
@@ -1120,8 +1120,269 @@
       <a href="#" class="link">Sign Up</a>
       <a href="#" class="link">Forgot Password?</a>
     </div>
-  </div>
+  </div> -->
 
+
+  <!-- <h1>개인정보 폼</h1>
+
+  <style>
+	.container {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+
+    .col-span-2 {
+      grid-column-start: span 2;
+    }
+
+    .col-span-3 {
+      grid-column-start: span 3;
+    }
+
+    .col-span-4 {
+      grid-column-start: span 4;
+    }
+
+    .col-span-6 {
+      grid-column-start: span 6;
+    }
+
+		label {
+			display: block;
+			margin-bottom: 0.25rem;
+		}
+
+		input, select {
+			/* 입력란의 크기를 그리드 아이템에 맞춘다 */
+			width: 100%;
+			padding: 0.5rem;
+			box-sizing: border-box;
+			border: 1px solid #ddd;
+			border-radius: 0.25rem;
+		}
+  </style>
+
+  <div class="container">
+    <div class="col-span-3">
+      <label for="fname">First name</label>
+      <input type="text" id="fname">
+    </div>
+
+    <div class="col-span-3">
+      <label for="lname">Last name</label>
+      <input type="text" id="lname">
+    </div>
+
+    <div class="col-span-4">
+      <label for="email">Email address</label>
+      <input type="text" id="email">
+    </div>
+
+    <div class="col-span-2">
+      <label for="country">Country</label>
+      <select name="country" id="country">
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="mx">Mexico</option>
+      </select>
+    </div>
+
+    <div class="col-span-6">
+      <label for="address">Street Address</label>
+      <input type="text" id="address">
+    </div>
+
+    <div class="col-span-2">
+      <label for="city">City</label>
+      <input type="text" id="city">
+    </div>
+
+    <div class="col-span-2">
+      <label for="state">State / Province</label>
+      <input type="text" id="state">
+    </div>
+
+    <div class="col-span-2">
+      <label for="zip">ZIP / Postal code</label>
+      <input type="text" id="zip">
+    </div>
+  </div> -->
+
+
+	<!-- <style>
+		input {
+			display: none;
+		}
+
+		.container {
+      display: inline-grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+
+    .btn {
+      /* size */
+      padding: 0.5rem 1rem;
+      /* design */
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+		/* 선택된 버튼에 반전효과 */
+		input:checked + .btn {
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+
+	<h1>옵션 선택</h1>
+	<p>램사이즈를 선택하세요</p>
+
+	<div class="container">
+		<input type="radio" name="btn" id="4gb">
+    <label for="4gb" class="btn">4GB</label>
+
+    <input type="radio" name="btn" id="8gb" checked>
+    <label for="8gb" class="btn">8GB</label>
+
+    <input type="radio" name="btn" id="16gb">
+    <label for="16gb" class="btn">16GB</label>
+
+    <input type="radio" name="btn" id="32gb">
+    <label for="32gb" class="btn">32GB</label>
+    
+    <input type="radio" name="btn" id="64gb">
+    <label for="64gb" class="btn">64GB</label>
+  </div> -->
+
+
+	<!-- <h1>설문조사</h1>
+	<p>어떤 폰을 구매하고싶습니까?</p>
+
+	<style>
+    input {
+      display: none;
+    }
+    
+    .option {
+      /* layout */
+      display: block;
+      margin-bottom: 0.5rem;
+      /* design */
+      padding: 0.5rem;
+      border: 2px solid #ddd;
+      border-radius: 0.25rem;
+    }
+
+    input:checked + .option {
+      border: 2px solid #000;
+    }
+  </style>
+
+
+  <input type="radio" name="phone" id="a">
+  <label for="a" class="option">iPhone 15 Pro</label>
+
+  <input type="radio" name="phone" id="b">
+  <label for="b" class="option">Galaxy S24</label>
+
+  <input type="radio" name="phone" id="c">
+  <label for="c" class="option">Pixel Pro 8</label>
+  
+  <input type="radio" name="phone" id="d">
+  <label for="d" class="option">Others</label> -->
+
+
+	<!-- <h1>Color picker</h1>
+
+	<style>
+    input {
+      display: none;
+    }
+
+    .color-chip {
+      /* layout */
+      display: inline-block;
+      margin-right: 0.25rem;
+      /* size */
+      width: 2rem;
+      height: 2rem;
+      /* design */
+      border: 1px solid #ddd;
+      border-radius: 99px;
+    }
+    
+    input:checked + .color-chip {
+      outline: 4px solid #eee;
+    }
+    
+    .white {
+      background-color: #fff;
+    }
+    
+    .gray {
+      background-color: #888;
+    }
+    
+    .black {
+      background-color: #000;
+    }
+  </style>
+
+  <input type="radio" name="color" id="white" checked>
+  <label for="white" class="color-chip white"></label>
+
+  <input type="radio" name="color" id="gray">
+  <label for="gray" class="color-chip gray"></label>
+  
+  <input type="radio" name="color" id="black">
+  <label for="black" class="color-chip black"></label> -->
+
+
+	<h1>할수있는 언어를 골라보세요</h1>
+
+	<style>
+		input {
+			display: none;
+		}
+
+		.option {
+			display: inline-block;
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.75rem;
+      border-radius: 99px;
+		}
+
+		/* 선택된 옵션에 배경색 효과 */
+		input:checked + .option {
+			background-color: #cff;
+		}
+
+		.option::before {
+			content: "+ ";
+		}
+
+		/* 선택된 옵션에 + 제거 */
+		input:checked + .option::before {
+			/* 빈 문자열 */
+			content: "";
+		}
+	</style>
+
+	<input type="checkbox" name="skills" id="html">
+  <label for="html" class="option">HTML</label>
+
+  <input type="checkbox" name="skills" id="css">
+  <label for="css" class="option">CSS</label>
+
+  <input type="checkbox" name="skills" id="js">
+  <label for="js" class="option">JavaScript</label>
+  
+  <input type="checkbox" name="skills" id="react">
+  <label for="react" class="option">React</label>
 
     
 </body>
