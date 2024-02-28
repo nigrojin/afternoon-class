@@ -1342,7 +1342,7 @@
   <label for="black" class="color-chip black"></label> -->
 
 
-	<h1>할수있는 언어를 골라보세요</h1>
+	<!-- <h1>할수있는 언어를 골라보세요</h1>
 
 	<style>
 		input {
@@ -1382,7 +1382,279 @@
   <label for="js" class="option">JavaScript</label>
   
   <input type="checkbox" name="skills" id="react">
-  <label for="react" class="option">React</label>
+  <label for="react" class="option">React</label> -->
+
+
+  <!-- <h1>아바타</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      /* layout */
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      border-radius: 99px;
+    }
+
+    .info {
+      margin-left: 1rem;
+    }
+
+    .username {
+      margin: 0;
+    }
+
+    .full-name {
+      color: #888;
+    }
+  </style>
+
+  <div class="container">
+    <img class="avatar" src="https://i.namu.wiki/i/oMGRC944XdCwbvvFTV_h2e_4Oco6fDSIFOtFXSjYgsEkziZULioJpuHJuAor6GNqvJo8dz9xVPqBuE2lklPLnw.webp" alt="">
+    <div class="info">
+      <h3 class="username">이호창</h3>
+      <span class="full-name">본부장</span>
+    </div>
+  </div> -->
+
+
+  <!-- <h1>카드</h1>
+
+  <style>
+    .card {
+      width: 16rem;
+      /* border: 1px dashed; */
+
+      /* 
+        box-shadow
+        그림자 효과
+        기본값은 none (효과 없음)
+
+        - 사용 방법
+        box-shadow: x y blur spread color inset
+
+        1 offset-x (필수)
+        왼쪽(-), 오른쪽(+)
+
+        2 offset-y (필수)
+        위(-) / 아래(+)
+
+        3 blur (흐림)
+        숫자가 클수록 더 흐리다
+
+        4 spread (퍼짐)
+        숫자가 클수록 그림자가 더 크다
+
+        5 color
+        그림자의 색상
+
+        6 inset
+        엘리먼트 안에 그림자 효과가 적용된다
+      */
+      box-shadow: 5px 5px 10px #ddd, -5px -5px 10px #ddd;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    img {
+      width: inherit;
+    }
+
+    .card-inner {
+      padding: 0 1rem 1rem;
+    }
+
+    .content {
+      color: #888;
+    }
+  </style>
+
+  <div class="card">
+    <img src="https://i.namu.wiki/i/oMGRC944XdCwbvvFTV_h2e_4Oco6fDSIFOtFXSjYgsEkziZULioJpuHJuAor6GNqvJo8dz9xVPqBuE2lklPLnw.webp" alt="">
+    <div class="card-inner">
+      <h3>Pumbaa</h3>
+      <p class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Doloribus in corporis illo.
+      </p>
+    </div>
+  </div> -->
+
+
+  <!-- <h1>프로필</h1>
+
+  <style>
+    .container {
+      background-color: #cef;
+      height: 150px;
+      /* layout */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 99px;
+      /* position */
+      position: relative;
+      top: 25px;
+      border: 1px solid #ddd;
+    }
+
+    .info {
+      margin-top: 50px;
+      text-align: center;
+    }
+  </style>
+
+
+  <div class="container">
+    <img src="https://i.namu.wiki/i/ZnBMAAGJaiFKqDmASXCt-977Xuq6gLA-G8AsD4K1BKCVBEzrjISoW9QyfcSKPnacwuBpCGSSyBtCJv8E-UocNQ.webp" alt="">
+  </div>
+
+  <div class="info">
+    <h3>Timon</h3>
+    <p>
+      Hello World!
+    </p>
+  </div> -->
+
+  <!-- <h1>이미지 확대효과</h1>
+
+  <style>
+    .container {
+      border: 1px solid #ddd;
+      width: 400px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      /* 애니메이션 효과 */
+      transition: transform 0.2s;
+    }
+
+    .container:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <div class="container">
+    <img src="https://cdn.entermedia.co.kr/news/photo/202208/29727_57556_157.jpg" alt="">
+  </div> -->
+
+
+  <!-- <h1>오버레이가 있는 이미지</h1>
+
+  <style>
+    .container {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ddd;
+      /* position */
+      position: relative;
+    }
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      /* 포지션 값을 모두 0으로 하면 엘리먼트를 커버한다 */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0 0 0 / 0.5);
+      color: #fff;
+      /* layout */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* 처음에 안보이는 상태
+        
+        opacity 
+        불투명도. 0에서 1 사이의 값을 가진다
+        0은 완전 투명, 1은 완전 불투명
+      */
+      opacity: 0;
+      /* 애니메이션 효과 */
+      transition: opacity 0.2s;
+    }
+
+    /* 호버했을 때 */
+    .overlay:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="container">
+    <img src="https://dimg.donga.com/wps/SPORTS/IMAGE/2021/01/12/104876389.1.jpg" alt="">
+    <div class="overlay">
+      <span>Caption</span>
+    </div>
+  </div> -->
+
+
+  <h1>Figure</h1>
+
+  <style>
+    .container {
+      border: 1px solid #ddd;
+      /* size */
+      width: 300px;
+      height: 300px;
+      /* position */
+      position: relative;
+    }
+
+    img {
+      /* size */
+      width: inherit;
+      height: inherit;
+      /* fit */
+      object-fit: cover;
+    }
+
+    .overlay {
+      /* position */
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      /* size */
+      width: inherit;
+      padding: 0 1rem;
+      box-sizing: border-box;
+      /* design */
+      background-color: rgba(255 255 255 / 0.5);
+      color: #fff;
+    }
+  </style>
+
+  <div class="container bg-image">
+    <img src="https://blog.kakaocdn.net/dn/dLnXT3/btseyzhMSj7/MGrkOD0fKKQt8rJzK2xfnk/img.jpg" alt="">
+    <div class="overlay">
+      <p>Timon & Pumbaa</p>
+    </div>
+  </div>
+
 
     
 </body>
