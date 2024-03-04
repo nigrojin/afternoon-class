@@ -1613,7 +1613,7 @@
   </div> -->
 
 
-  <h1>Figure</h1>
+  <!-- <h1>Figure</h1>
 
   <style>
     .container {
@@ -1653,7 +1653,456 @@
     <div class="overlay">
       <p>Timon & Pumbaa</p>
     </div>
+  </div> -->
+
+
+  <!-- <h1>반응형 이미지 레이아웃</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    img {
+      /* 그리드 아이템에 이미지를 맞춘다 */
+      width: 100%;
+      height: auto;
+    }
+
+    /* 스몰사이즈 이상 */
+    @media (min-width: 640px) {
+      .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+
+
+  <div class="container">
+    <img src="https://dimg.donga.com/wps/SPORTS/IMAGE/2021/01/12/104876389.1.jpg" alt="">
+    <img src="https://blog.kakaocdn.net/dn/dLnXT3/btseyzhMSj7/MGrkOD0fKKQt8rJzK2xfnk/img.jpg" alt="">
+  </div> -->
+
+  <!-- <h1>Article</h1>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* 스몰사이즈 이상 */
+    @media (min-width: 640px) {
+      .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+
+  <div class="container">
+    <img src="https://i.namu.wiki/i/oMGRC944XdCwbvvFTV_h2e_4Oco6fDSIFOtFXSjYgsEkziZULioJpuHJuAor6GNqvJo8dz9xVPqBuE2lklPLnw.webp" alt="">
+    <div class="content">
+      <h1>Title</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Doloribus labore distinctio facere earum alias omnis voluptatum itaque? 
+        Adipisci, soluta odio quia, accusantium deleniti incidunt quibusdam 
+        assumenda debitis molestias veritatis vero?
+      </p>
+    </div>
+  </div> -->
+
+
+  <!-- <h1>Gallery</h1>
+
+  <style>
+    .container {
+      width: 450px;
+      /* border: 1px dashed; */
+      /* 아이템을 감싸지 않는다 */
+      white-space: nowrap;
+      /* 스크롤 생성 */
+      overflow: auto;
+      padding: 1rem 0;
+    }
+
+    img {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 0.5rem;
+    }
+
+    /* 스크롤 영역 */
+    ::-webkit-scrollbar {
+      /* x축일 때 height, y축 일때 width */
+      height: 4px;
+    }
+
+    /* track */
+    ::-webkit-scrollbar-track {
+      background-color: #eee;
+    }
+
+    /* handle */
+    ::-webkit-scrollbar-thumb {
+      background-color: #333;
+    }
+  </style>
+
+  <div class="container">
+    <img src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+    <img src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+    <img src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+  </div> -->
+
+
+  <!-- <h1>Hero image</h1>
+
+  <style>
+    body {
+      margin: 0;
+    }
+    
+    /* 배경 이미지 */
+    .background {
+      height: 400px;
+      /* 
+        linear-gradient(진행 방향, 색1, 색2, ...)
+      */
+      background-image: linear-gradient(to right, #333, #000);
+    }
+
+    /* 내용 부분 */
+    .container {
+      max-width: 640px;
+      height: inherit;
+      margin: 0 auto;
+      /* layout */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 1rem;
+      color: #fff;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #fff;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      /* 호버 효과 */
+      opacity: 0.8;
+    }
+
+    /* 호버했을 때 선명하게 */
+    .btn:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="background">
+    <div class="container">
+      <h1 class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h1>
+      <div class="btn-group">
+        <button class="btn">Sign Up</button>
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- <h1>Modal</h1>
+
+  <style>
+    .overlay {
+      position: fixed;
+      /* 포지션 값을 모두 0으로 하는 경우 부모 또는 기준이 되는 엘리먼트를 커버한다 */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0 0 0 / 0.2);
+    }
+
+    .modal {
+      width: 20rem;
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 1rem;
+      /* 화면 가운데에 위치시킨다 */
+      margin: 100px auto 0;
+    }
+  </style>
+
+  <div class="overlay">
+    <div class="modal">
+      <h1>Content</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, asperiores quam? Porro, sit cum maiores odio
+        reprehenderit ea, molestiae quibusdam iusto eos, id molestias quas ipsam temporibus quo quam distinctio!</p>
+    </div>
+  </div> -->
+
+
+  <!-- <h1>Modal Gallery</h1>
+
+  <style>
+    .overlay {
+      position: fixed;
+      /* all 0 */
+      inset: 0;
+      background-color: rgba(0 0 0 / 0.5);
+    }
+
+    .modal {
+      width: 24rem;
+      margin: 100px auto 0;
+    }
+
+    img {
+      width: inherit;
+      border-radius: 1rem;
+    }
+
+    .caption {
+      text-align: center;
+      color: #ddd;
+    }
+  </style>
+
+
+<div class="overlay">
+  <div class="modal">
+    <img src="https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2023%2F07%2Fwatch-newjeans-exciting-music-video-for-new-single-eta-ft.jpg?w=960&cbr=1&q=90&fit=max" alt="">
+    <h3 class="caption">ETA - New Jeans</h3>
   </div>
+</div> -->
+
+
+<!-- <h1>테이블</h1>
+
+<style>
+  table {
+    /* 
+      border-collapse
+      셀 사이의 간격을 처리한다
+
+      1 seperate (기본값)
+      셀 사이에 공간을 준다
+
+      2 collapse (권장)
+      셀 사이에 공간을 주지 않는다
+    */
+    border-collapse: collapse;
+    width: 100%;
+    /* 모든 열이 같은 넓이를 가진다 */
+    table-layout: fixed;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  thead tr {
+    border-bottom: 1px solid;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+
+  /* 
+    가상 클래스 nth-child
+    특정한 순서의 자식을 선택할 수 있다
+
+    - 인자가 될수 있는 값
+    1 숫자
+    2 even (짝수) 또는 odd(홀수)
+    3 간단한 연산
+    예) 2n + 1 (n은 0부터 시작)
+  */
+
+  /* ID 두껍게 처리 */
+  tr td:nth-child(1) {
+    font-weight: 600;
+  }
+
+  /* 지브라 디자인 */
+  tbody tr:nth-child(odd) {
+    background-color: #eee;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Origin</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Guinness</td>
+      <td>Ireland</td>
+      <td>No</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Heineken</td>
+      <td>Netherlands</td>
+      <td>Yes</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Budwiser</td>
+      <td>USA</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<!-- <h1>비교표</h1>
+
+<style>
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  thead {
+    background-color: #333;
+    color: #fff;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 1rem;
+  }
+  
+  /* column 1 */
+  th:nth-child(1) {
+    text-align: left;
+  }
+
+  td:nth-child(1) {
+    font-weight: 600;
+  }
+
+  /* column 2, 3 */
+  td:nth-child(n + 2) {
+    text-align: center;
+  }
+</style>
+
+<table>
+  <thead>
+    <th>Features</th>
+    <th>Galaxy S24</th>
+    <th>iPhone 15</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RAM</td>
+      <td>8GB</td>
+      <td>6GB</td>
+    </tr>
+    <tr>
+      <td>Refresh Rate</td>
+      <td>128hz</td>
+      <td>60hz</td>
+    </tr>
+    <tr>
+      <td>Battery</td>
+      <td>4000mAh</td>
+      <td>3349mAh</td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<!-- <h1>Spinner</h1>
+
+<style>
+  #spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    /* 뚜껑을 날려버림 */
+    border-top: 5px solid transparent;
+    border-radius: 99px;
+
+    /* 
+      CSS 애니메이션
+
+      1 name (필수)
+      애니메이션의 이름
+
+      2 duration (필수)
+      애니메이션이 한번 진행되는데 걸리는 시간
+
+      3 iteration-count
+      애니메이션의 반복 횟수. 기본값은 1
+
+      4 timing-function
+      애니메이션의 속도 조절
+
+      1) ease (기본값)
+      2) ease-in
+      3) ease-out
+      4) linear
+    */
+
+    /* 애니메이션 적용 */
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  /* 애니메이션 정의 */
+  @keyframes spin {
+    from {
+      transform: ratate(0deg);
+    } to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+<div id="spinner"></div>  -->
+
 
 
     
