@@ -914,25 +914,340 @@
 */
 
 
-var car = "XM3 Hybrid";
+// var car = "XM3 Hybrid";
 
-switch (car) {
-  case "Avante Hybrid":
-    console.log(2500);
-    break;
+// switch (car) {
+//   case "Avante Hybrid":
+//     console.log(2500);
+//     break;
 
-  case "XM3 Hybrid":
-    console.log(3000);
-    break;
+//   case "XM3 Hybrid":
+//     console.log(3000);
+//     break;
 
-  case "KONA":
-    console.log(4500);
-    break;
+//   case "KONA":
+//     console.log(4500);
+//     break;
 
-  case "IONIQ 6":
-    console.log(5000);
-    break;
+//   case "IONIQ 6":
+//     console.log(5000);
+//     break;
 
-  default:
-    console.log("판매중인 차가 아닙니다");
-}
+//   default:
+//     console.log("판매중인 차가 아닙니다");
+// }
+
+
+/*
+	반복문
+	블록의 코드를 여러번 실행한다
+
+	1 for 문
+	2 while 문
+*/
+
+
+/*
+	for 문
+
+	1 사용방법
+	2 실제 사용 예시
+	3 break
+	4 continue
+*/
+
+
+/*
+	1 사용방법
+
+	for (표현식1; 표현식2; 표현식3) {
+		반복 실행할 코드
+	}
+
+	표현식1 - 변수 초기화
+	표현식2 - 반복 조건
+	표현식3 - 변수 업데이트 연산
+*/
+
+
+// for (var n = 1; n <= 10; n++) { // 블록 (block)
+
+// 	// 반복 변수 (n) 에 접근 가능
+// 	console.log(n + "번 실행되었습니다.");
+// }
+
+
+// 사용 사례 - 1 부터 10까지의 합을 구하는 경우
+
+
+// var sum = 0;
+
+// for (var n = 1; n <= 10; n++) {
+// 	// sum 변수에 n값을 누적시킨다
+
+// 	sum += n; // sum = sum + n
+// }
+
+// console.log(sum);
+// 55
+
+
+// break - 반복문에서 빠져나온다
+
+// for (var n = 1; n <= 10; n++)  {
+// 	if (n == 5) {
+// 		break;
+// 	}
+
+// 	console.log(n);
+// }
+
+
+// continue - 현재 블록을 건너뛴다
+
+// for (var n = 1; n <= 10; n++) {
+// 	if (n == 5) {
+// 		continue;
+// 	}
+
+// 	console.log(n);
+// }
+
+
+/*
+	Q. for 문
+
+	1부터 10까지의 숫자중 짝수만 출력하는 for문을 작성해보세요
+
+	3가지 방법..
+*/
+
+
+// for (var n = 1; n <= 10; n++) {
+// 	if (n % 2 == 0) { // 짝수인지 확인
+// 		console.log(n);
+// 	}
+// }
+
+
+// for (var n = 1; n <= 10; n++) {
+//   if (n % 2 == 1) { // 홀수일때 스킵
+//     continue;
+//   }
+
+//   console.log(n);
+// }
+
+
+// for (var n = 2; n <= 10; n += 2) {
+//   console.log(n);
+// }
+
+
+/*
+	while 문
+
+	while (반복 조건) {
+		반복 실행할 코드
+	}
+*/
+
+
+// 변수 초기화
+// var n = 1;
+
+// while (n <= 10) {
+// 	console.log(n + "번 실행되었습니다.");
+
+// 	// 변수 업데이트 연산
+// 	n++;
+// }
+
+
+// break, continue 사용 가능
+// var n = 1;
+
+// while (true) {
+//   if (n == 5) {
+//     break;
+//   }
+  
+//   console.log(n);
+
+//   n++;
+// }
+
+
+/*
+	Q. while 문
+
+	1부터 10까지의 합을 구하는 while문을 작성해보세요
+*/
+
+
+// var n = 1;
+// var sum = 0;
+
+// while (n <= 10) {
+// 	sum += n;
+
+// 	// 순서 중요
+//   n++;
+// }
+
+// console.log(sum);
+
+
+/*
+	함수
+	호출할 때에만 실행되는 코드
+	프로그래밍에서 기능의 단위로 사용된다
+
+	1 함수 선언, 호출
+	2 Hoisting
+	3 매개변수와 인자
+	4 return
+	5 콜백
+*/
+
+
+// 함수의 선언과 호출
+
+
+// 선언
+// function f() { // 함수 정의
+// 	console.log("호출되었습니다");
+// }
+
+// // 호출
+// f();
+// f();
+
+
+// 함수표현식
+// var f = function () { // 익명함수
+// 	console.log("호출되었습니다");
+// }
+
+// // 호출
+// f();
+
+
+/*
+	Hoisting (게양)
+
+	함수의 호출 아래에 함수 선언을 작성할 수 있다
+	일종의 가독성 옵션
+	함수표현식에서는 사용할 수 없다
+*/
+
+
+// f(); // 호출 시점을 기준으로 함수가 선언된 적이 없다
+
+// // 함수의 선언은 게양된다(올라간다)
+// function f() {
+// 	console.log("호출되었습니다")
+// }
+
+
+/*
+	매개변수와 인자
+
+	1 매개변수 (parameter)
+	인자를 치환한 변수
+
+	2 인자 (argument)
+	함수에 입력되는 값
+*/
+
+
+// 두 개의 인자를 더한 후 값을 출력하는 함수
+// function add(x, y) { // x, y - 매개변수
+// 	console.log("결과:", x + y);
+// }
+
+
+// add(1, 2); // 1, 2 - 인자
+
+
+/*
+	return
+
+	함수는 작업의 결과를 반환(return)할 수 있다
+*/
+
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+
+// // 함수의 반환값을 변수r에 저장한다
+// var r = add(1, 2);
+
+// console.log("결과:", r);
+
+
+// return은 작업을 중단시키기 위해 사용될수 있다
+
+
+// 인자의 제곱(square)을 구하는 함수
+// function getSquare(n) {
+//   if (typeof n != "number") { // number타입인지 검사
+//     console.log("err: 잘못된 타입");
+//     return;
+//   }
+
+//   console.log(n ** 2);
+// }
+
+
+// getSquare(5);
+
+
+/*
+	콜백 (callback)
+
+	함수 인자
+
+	1 사용방법
+	2 사용 사례
+*/
+
+
+// 사용  방법
+// function f(callback) {
+//   var foo = "bar";
+
+//   callback(foo);
+// }
+
+// function cb(data) { // 콜백
+//   console.log(data);
+// } 
+
+// f(cb);
+
+
+// 사용 사례 - 시계
+
+
+// 콜백
+// function getTime() {
+// 	// 현재 시간
+//   var time = new Date().toLocaleTimeString();
+  
+//   console.log(time);
+// }
+
+// // setInterval(콜백, ms): ms 마다 콜백을 실행한다 (1000ms = 1s)
+// setInterval(getTime, 1000);
+
+
+
+/*
+	Q. 함수
+	나이 입력값에 따라서 사람이 성인인지 아닌지를 출력하는
+	함수를 선언해보세요.
+	입력값에 문제가 있으면 적절한 메시지를 출력해보세요
+*/
