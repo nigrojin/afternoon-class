@@ -1595,3 +1595,406 @@
 //     console.log(arr[i]);
 //   }
 // }
+
+
+/*
+	객체 (Object)
+	데이터와 함수의 집합
+	데이터를 다룰 때 기본 단위로 사용된다
+
+	1 구조
+	2 기본 사용방법
+*/
+
+
+/*
+	구조
+
+	1 속성
+	객체가 가진 데이터
+	key와 value로 구성된다
+
+	2 메서드
+	속성들 중 값이 함수인 것을
+	특별히 메서드라고 부른다
+*/
+
+
+// // 고양이 객체
+// var cat = {
+// 	// 속성 - key: value
+// 	name: "치즈",
+// 	home: null,
+// 	// 메서드
+// 	sound: function () {
+// 		return "야옹";
+// 	}
+// }
+
+// console.log(cat);
+
+
+/*
+	Q. 객체의 구조
+	다음을 만족하는 'korea' 객체를 선언해보세요
+
+	- 속성
+	1 수도 (String)
+	서울
+
+	2 인구 (Number)
+	50,000,000
+
+	3 언어 (String)
+	한국어
+
+	4 G7 여부 (Boolean)
+	아니오
+
+	- 메서드
+	1 K-POP 플레이어
+	kpop 음악을 재생한다
+*/
+
+
+// var korea = {
+// 	capitalCity: "서울",
+// 	population: 50000000,
+// 	language: "한국어",
+// 	isG7: false,
+// 	kpop: function () {
+// 		return "내 지난 날들은 눈 뜨면 잊는 꿈~";
+// 	}
+// }
+
+// console.log(korea);
+
+
+/*
+	기본 사용방법
+
+	1 속성에 접근하기
+	2 속성 추가
+	3 속성 수정
+	4 속성 삭제
+*/
+
+
+// 속성에 접근하기
+
+// var cat = {
+// 	name: "치즈",
+// 	home: null,
+// 	sound: function () {
+// 		return "야옹";
+// 	}
+// }
+
+// 키로 접근
+// console.log("name:", cat.name);
+
+// console.log("name:", cat["name"]);
+
+// 메서드 호출
+// console.log("sound:", cat.sound());
+
+// 없는 속성에 접근 시도 - undefined
+// console.log("age:", cat.age);
+
+
+// 2 속성 추가
+// var cat = {
+// 	name: "치즈",
+// 	home: null
+// }
+
+// cat.age = 2;
+
+// console.log(cat);
+
+
+// 3 속성 수정
+// var cat = {
+// 	name: "치즈",
+// 	home: null // 길냥이
+// }
+
+
+// cat.home = "삼산동"; // 입양
+
+// console.log(cat);
+
+
+// 4 속성 삭제
+
+// var cat = {
+// 	name: "치즈",
+// 	home: null
+// }
+
+// delete cat.home; // 민감정보
+
+
+// console.log(cat);
+
+
+/*
+	Q. 기본 사용방법
+
+	아래의 리스트를 참고하여 2개의 문제를 풀어보세요 (배열 순회)
+
+	1 판매중인(available) 맥주의 이름만 출력해보세요
+
+	결과:
+	하이네켄
+	버드와이저
+	기린
+
+	2 기네스가 재입고 되었습니다. 리스트를 업데이트해보세요
+*/
+
+// var beers = [
+//   { name: "Guinness", available: false },
+//   { name: "Heineken", available: true },
+//   { name: "Budwiser", available: true },
+//   { name: "Kirin", available: true },
+// ]
+
+// 1
+// for (var i = 0; i < beers.length; i++) {
+// 	if (beers[i].available) { // beers[i].available == true
+// 		console.log(beers[i].name);
+// 	}
+// }
+
+
+// 2
+// for (var i = 0; i < beers.length; i++) {
+// 	if (beers[i].name == "Guinness") {
+// 		beers[i].available = true;
+// 	}
+// }
+
+// console.log(beers);
+
+
+/*
+	클래스 (Class)
+	객체 생성용 틀
+	자바스크립트에서 효율적인 객체 관리를 위해 사용된다
+
+	1 구조
+	2 인스턴스
+	3 생성자
+	4 함수 멤버
+	5 static 멤버
+	6 자바스크립트에 내장된 클래스
+	7 넓은 의미에서의 객체
+*/
+
+
+/*
+	구조
+*/
+
+
+// 클래스의 이름은 대문자로 시작해야 한다
+// class Beer {
+// 	// 클래스에 속한 데이터 - 클래스 멤버
+// 	name;
+// 	origin;
+// 	available;
+// }
+
+
+/*
+	인스턴스 (instance)
+
+	클래스가 생성한 객체
+
+	1 인스턴스 생성 방법
+	2 여러개의 인스턴스
+*/
+
+
+// 1 생성 방법
+// class Beer {
+// 	name;
+// 	origin;
+// 	available;
+// }
+
+
+// // 인스턴스 생성 - Beer 클래스의 인스턴스
+// var irishBeer = new Beer();
+
+// // 인스턴스의 속성값 대입
+// irishBeer.name = "Guinness"
+// irishBeer.origin = "Ireland"
+// irishBeer.available = false;
+
+// console.log(irishBeer);
+
+// // 클래스의 인스턴스인지 확인한다
+// console.log(irishBeer instanceof Beer);
+// // true
+
+
+// 2 여러개의 인스턴스 생성
+// class Beer {
+//   name;
+//   origin;
+//   available;
+// }
+
+
+// var irishBeer = new Beer();
+
+// irishBeer.name = "Guinness"
+// irishBeer.origin = "Ireland"
+// irishBeer.available = false;
+
+// console.log(irishBeer);
+// console.log(irishBeer instanceof Beer);
+
+
+// var dutchBeer = new Beer();
+
+// dutchBeer.name = "Heineken"
+// dutchBeer.origin = "Netherlands"
+// dutchBeer.available = true;
+
+
+// console.log(dutchBeer);
+// console.log(dutchBeer instanceof Beer);
+
+
+// var americanBeer = new Beer();
+
+// americanBeer.name = "Budwiser"
+// americanBeer.origin = "USA"
+// americanBeer.available = true;
+
+// console.log(americanBeer);
+// console.log(americanBeer instanceof Beer);
+
+
+/*
+	생성자 (constructor)
+
+	인스턴스의 속성 설정을 처리한다
+*/
+
+// class Beer {
+//   name;
+//   origin;
+//   available;
+
+// 	// 함수
+//   constructor (name, origin, available) {
+// 		// this - 인스턴스
+//     this.name = name;
+//     this.origin = origin;
+//     this.available = available;
+//   }
+// }
+
+
+// var irishBeer = new Beer("Guinness", "Ireland", false);
+// var dutchBeer = new Beer("Heineken", "Netherlands", true);
+// var americanBeer = new Beer("Budwiser", "USA", true);
+
+
+/*
+	함수 멤버
+
+	인스턴스의 메서드가 된다
+*/
+
+
+// class Beer {
+	
+// 	// ...
+
+// 	drink() {
+// 		return "시원하다!";
+// 	}
+// }
+
+
+// var beer = new Beer();
+
+// console.log(beer.drink());
+
+
+/*
+	static 멤버
+
+	클래스와 관련된 유용한 기능을 제공한다
+	클래스 자체가 호출한다
+*/
+
+
+// class Beer {
+
+// 	// ..
+
+// 	// static 변수
+// 	static history = "기원전 3000년 전";
+
+// 	// static 함수
+// 	static brewing() { // 제조법 (양조법)
+// 		return "밀, 홉, 효모, 물 등";
+// 	}
+// }
+
+
+// // 호출 - 클래스 자체가 호출한다
+// console.log(Beer.history);
+// console.log(Beer.brewing());
+
+
+// 내장된 클래스의 static 속성
+// console.log(Math.PI);
+
+
+// 완성된 Beer 클래스
+
+// class Beer {
+//   name;
+//   origin;
+//   available;
+  
+//   constructor (name, origin, available) {
+//     this.name = name;
+//     this.origin = origin;
+//     this.available = available;
+//   }
+
+//   drink() {
+//     return "시원하다!";
+//   }
+
+//   static history = "기원전 3000년 전";
+
+//   static brewing() {
+//     return "밀, 홉, 효모, 물 등";
+//   }
+// }
+
+
+/*
+	Q. 클래스
+	아래를 만족하는 <Car> 클래스를 정의해보세요
+
+	- 변수 멤버
+	name, brand, color
+
+	- 생성자 있음
+
+	- 함수 멤버
+	자동차 소리를 낸다
+
+	- static 함수
+	구매 연도를 입력하면 차의 나이를 말해준다
+*/
