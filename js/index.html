@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트와 HTML</title>
+</head>
+<body>
+
+    <!-- <h1>기본 사용방법</h1>
+    <pre>
+        1. script 쓰기 / 디버깅
+        2. DOM
+        3. window 객체
+    </pre> -->
+
+		
+	<!-- <h1>script 쓰기 / 디버깅</h1>
+
+
+	<script>
+		console.log("hello script!");
+	</script> -->
+
+
+	<!-- <h1>DOM</h1>
+	<pre>
+		자바스크립트 객체 모델 (JavaScript Object Model).
+		문서의 모든 엘리먼트가 객체라는 것을 의미한다
+	</pre>
+
+
+	<input type="text" id="input">
+
+
+	<script>
+		// 문서의 input엘리먼트 선택
+		var input = document.getElementById("input");
+
+		// focus 메서드 호출
+		input.focus();
+		// focus - 문서가 열렸을 때 커서를 둔다
+	</script> -->
+
+
+	<!-- <h1>window 객체</h1>
+	<p>
+		뷰 개발을 위한 도구모음
+	</p>
+
+
+	<script>
+		console.log(window);
+
+		// window 객체의 메서드 (앞에 window는 생략 가능)
+		alert("hello world!"); // window.alert("hello world!")
+	</script> -->
+
+
+	<!-- <h1>선택자</h1>
+	<pre>
+		1. id 선택자
+		2. class 선택자
+	</pre> -->
+
+
+	<!-- <h1>id 선택자</h1>
+	<p>id로 엘리먼트를 선택한다</p>
+
+	<ul>
+    <li id="foo">foo</li>
+    <li>bar</li>
+    <li>baz</li>
+  </ul>
+
+	<script>
+    // document.getElementById(id)
+    var foo = document.getElementById("foo");
+
+    console.log(foo);
+  </script> -->
+
+
+	<!-- <h1>class 선택자</h1>
+	<p>class로 엘리먼트를 선택한다</p>
+
+
+	<ul>
+    <li class="item">foo</li>
+    <li class="item">bar</li>
+    <li class="item">baz</li>
+  </ul>
+
+
+	<script>
+		// document.getElementsByClassName(class)
+    var items = document.getElementsByClassName("item");
+
+		// HTMLCollection - 배열과 비슷
+    // console.log(items) 
+
+		// 인덱스로 각각의 아이템에 접근 가능
+		// console.log(items[0]);
+		// console.log(items[1]);
+		// console.log(items[2]);
+
+		// 아이템의 갯수 구하기
+		// console.log(items.length);
+	</script> -->
+
+
+	<!-- <h1>Q. Selector</h1>
+  <p>모든 브랜드를 한번에 선택하고 그 중에서 현대 자동차에 접근해보세요</p>
+
+  <ul>
+    <li class="brand">Audi</li>
+    <li class="brand">Volvo</li>
+    <li class="brand">Hyundai</li>
+    <li class="brand">Toyota</li>
+  </ul>
+
+	<script>
+    var brands = document.getElementsByClassName("brand");
+
+    // list
+    console.log(brands);
+
+    // Hyundai
+    console.log(brands[2])
+  </script> -->
+
+
+	<!-- <h1>엘리먼트의 속성과 메서드</h1>
+	<pre>
+		1. textContent
+		2. innerHTML
+		3. classList
+		4. attribute
+		5. createElement
+	</pre> -->
+
+
+	<!-- <h1>textContent</h1>
+	<p>엘리먼트의 텍스트를 저장한다</p>
+
+	<p id="song">내가 만든 쿠키~</p>
+
+
+	<script>
+		var song = document.getElementById("song");
+
+		console.log(song.textContent);
+		// 내가 만든 쿠키~
+
+
+		// 수정
+		song.textContent = "널 위해 구웠지~";
+	</script> -->
+
+
+	<!-- <h1>innerHTML</h1>
+	<p>엘리먼트 내부의 트리를 문자열 타입으로 저장한다</p>
+
+
+	<ul id="list">
+		<li>스타리아</li>
+		<li>그랜저</li>
+		<li>아반떼</li>
+	</ul>
+
+
+	<script>
+		var list = document.getElementById("list");
+
+		console.log(list.innerHTML);
+		console.log(typeof list.innerHTML); // string
+
+		// 수정
+		list.innerHTML = `
+			<li>카니발</li>
+			<li>EV9</li>
+			<li>레이</li>
+		`;
+	</script> -->
+
+
+	<!-- <h1>classList</h1>
+	<p>
+		엘리먼트의 클래스 리스트를 저장한다
+		클래스를 조작하기 위한 몇가지 메서드를 가지고있다
+	</p>
+
+	<style>
+    .text-italic {
+      font-style: italic;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+    
+    .font-bold {
+      font-weight: bold;
+    }
+  </style>
+  
+  <ul>
+    <li id="foo" class="font-bold text-italic">foo</li>
+    <li>bar</li>
+    <li>baz</li>
+  </ul>
+
+
+	<script>
+		var foo = document.getElementById("foo");
+
+		// DOMTokenList - 배열과 비슷
+		console.log(foo.classList);
+
+		// 클래스 추가
+		foo.classList.add("underline");
+
+		// 클래스 삭제
+		foo.classList.remove("font-bold");
+
+		// 특정 클래스를 포함하는지 체크
+		console.log(foo.classList.contains("font-bold"));
+	</script> -->
+	
+
+	<h1>Q. classList</h1>
+  <p>자바스크립트를 활용하여 모든 아이템에 줄을 그어보세요</p>
+
+  <style>
+    .line-through {
+      text-decoration: line-through;
+    }
+  </style>
+
+
+  <ul>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+    <li class="item">list item</li>
+  </ul>
+
+</body>
+</html>

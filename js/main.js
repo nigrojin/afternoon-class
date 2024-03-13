@@ -1998,3 +1998,194 @@
 	- static 함수
 	구매 연도를 입력하면 차의 나이를 말해준다
 */
+
+
+// class Car {
+// 	name;
+// 	brand;
+// 	color;
+
+// 	constructor (name, brand, color) {
+// 		this.name = name;
+// 		this.brand = brand;
+// 		this.color = color;
+// 	}
+
+// 	sound() {
+// 		return "부릉";
+// 	}
+
+// 	static getAge(purchasedAt) {
+// 		return "자동차의 나이는 " + (2024 - purchasedAt) + "입니다";
+// 	}
+// }
+
+
+// // 인스턴스 생성
+// var car = new Car("GV80", "제네시스", "블랙");
+
+// console.log(car);
+
+// // 자동차의 나이 구하기
+// console.log(Car.getAge(2020));
+
+
+/*
+	에러와 예외
+
+	1 에러
+	2 예외
+*/
+
+
+/*
+	에러 (Error)
+
+	코드상의 결함
+	에러는 반드시 고쳐져야 한다
+*/
+
+
+// 선언된 적이 없는 변수에 접근 시도
+// console.log(foo);
+// name: ReferenceError
+// message: foo is not defined
+// stack: 기타
+
+
+/*
+	예외 (Exception)
+
+	필요한 경우 의도적으로 발생시키는 에러
+	예) 인증 처리
+*/
+
+
+// // 올바른 비밀번호
+// var password = "123";
+// // 로그인 시에 입력한 비밀번호
+// var input = "12";
+
+
+// try { // 코드 작성
+// 	if (input != password) {
+// 		// throw + 예외 - 예외를 던진다
+// 		throw "비밀번호가 일치하지 않습니다";
+// 	}
+
+// 	// 실행되지 않는다
+// 	console.log("로그인 성공");
+
+// } catch (error) { // 에러 처리
+// 	console.log("로그인 실패:", error);
+// }
+
+
+/*
+	동기작업과 비동기 작업
+
+	1 동기 작업
+	2 비동기 작업
+*/
+
+
+/*
+	동기 작업
+
+	작업이 순서대로 실행된다
+	대부분의 작업은 동기작업이다
+*/
+
+
+// function f() {
+// 	console.log("작업 1");
+// }
+
+
+// f();
+// console.log("작업 2");
+
+
+/*
+	비동기 작업
+
+	프로그램에서 블로킹(blocking)을 방지하기 위해 사용된다
+	예를 들어, 서버에서 데이터를 가져오는 행위 등
+*/
+
+
+// 서버에 데이터를 요청하는 함수
+// function getData(callback) {
+// 	// 서버가 응답하는데 1초가 걸린다고 가정
+//   setTimeout(function () {
+//     callback(null, "야옹");
+//   }, 1000);
+// }
+
+// getData(function (err, data) {
+//   if (err) {
+//     return console.error(err);
+//   }
+
+//   console.log("서버에서 받은 데이터:", data);
+// });
+
+
+// // 빠른 작업부터 우선 실행된다
+// console.log("다음 작업");
+
+
+/*
+	JSON
+
+	1 JSON 개념
+	2 JSON.stringify
+	3 JSON.parse
+*/
+
+
+/*
+	JSON 개념
+
+	자바스크립트 객체 표기법(JavaScript Object Notation)
+	객체를 전송하거나 저장하기 위한 텍스트 포멧
+*/
+
+// JSON 포멧
+// var cat_json = '{ "name": "치즈"}';
+
+// console.log(cat_json);
+// console.log(typeof cat_json);
+// // string
+
+
+/*
+	JSON.stringify()
+
+	객체를 JSON으로 변환한다
+*/
+
+
+// 객체
+// var cat = { name: "치즈" };
+// // JSON
+// var cat_json = JSON.stringify(cat);
+
+// console.log(cat_json);
+// console.log(typeof cat_json);
+
+
+/*
+	JSON.parse()
+
+	JSON을 객체로 변환한다
+*/
+
+
+// var cat_json = '{ "name": "치즈" }';
+// var cat = JSON.parse(cat_json);
+
+
+// console.log(cat);
+// console.log(typeof cat);
+// // object
