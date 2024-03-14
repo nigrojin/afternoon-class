@@ -228,7 +228,7 @@
 	</script> -->
 	
 
-	<h1>Q. classList</h1>
+	<!-- <h1>Q. classList</h1>
   <p>자바스크립트를 활용하여 모든 아이템에 줄을 그어보세요</p>
 
   <style>
@@ -247,6 +247,177 @@
     <li class="item">list item</li>
     <li class="item">list item</li>
   </ul>
+
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.add("line-through");
+    }
+  </script> -->
+
+
+  <!-- <h1>애트리뷰트</h1>
+
+  <label for="input">Password</label>
+  <input 
+    type="password" 
+    id="input"
+    name="password" 
+    value="12345"
+    style="display: inline-block"
+  >
+
+  <script>
+	var input = document.getElementById("input");
+
+	// 애트리뷰트에 접근
+	console.log("type:", input.type)
+    console.log("id:", input.id)
+    console.log("name:", input.name)
+    console.log("value:", input.value)
+    console.log("style display:", input.style.display);
+
+	// 수정
+	input.type = "text";
+  </script> -->
+
+
+  <!-- <h1>createElement</h1>
+  <p>새로운 엘리먼트를 생성한다</p>
+
+  <ul id="list">
+	<li>foo</li>
+	<li>bar</li>
+  </ul>
+
+
+  <script>
+	var list = document.getElementById("list");
+
+	// li 엘리먼트 생성
+	var item = document.createElement("li");
+
+	// 엘리먼트에 텍스트 추가
+	item.textContent = "baz";
+
+	// 리스트에 마지막 아이템으로 추가
+	list.appendChild(item);
+  </script> -->
+
+
+<!-- <h1>이벤트와 이벤트 처리</h1>
+<pre>
+	이벤트 - 문서에서 발생하는 일들
+	예) 클릭, 스크롤, 터치 등
+	</pre>
+
+<button id="btn">button</button>
+
+<script>
+	var btn = document.getElementById("btn");
+
+	// element.addEventListener(event, eventHandler)
+	btn.addEventListener("click", handleClick);
+	// 이벤트가 발생했을 때 이벤트 핸들러가 호출된다
+
+	function handleClick() {
+		// 메시지
+		alert("lol");
+	}
+</script> -->
+
+
+<!-- <h1>이벤트 애트리뷰트</h1>
+<pre>
+	이벤트 애트리뷰트로도 이벤트를 처리할 수 있다
+
+	onEvent="eventHandler()"
+</pre>
+
+
+<button onclick="f()">button</button>
+
+<script>
+	function f() {
+		alert("lol");
+	}
+</script> -->
+
+
+<!-- <h1>이벤트 객체</h1>
+<p>발생한 이벤트와 관련된 정보를 가지고 있다</p>
+
+<button id="btn">button</button>
+
+
+<script>
+	var btn = document.getElementById("btn");
+
+	btn.addEventListener("click", handleClick);
+
+	function handleClick(e) {
+		// event 객체
+		console.log(e);
+	}
+</script> -->
+
+
+<!-- <h1>Q. event</h1>
+
+<p id="message">우리나라에서 가장 바람이 귀엽게 부는 곳은?</p>
+
+<button id="btn">정답보기</button>
+
+
+<script>
+	var message = document.getElementById("message");
+	var btn = document.getElementById("btn");
+
+	// 익명함수 콜백
+	btn.addEventListener("click", function () {
+		message.textContent = "분당";
+	})
+</script> -->
+
+
+<!-- <h1>로컬스토리지 (localStorage)</h1>
+
+<pre>
+	브라우저가 제공하는 저장공간
+	클라이언트 측에서 데이터를 저장할 때 사용된다
+
+	예) 로그인 토큰, 테마 선택, 쇼핑 카트 등
+</pre>
+
+
+<script>
+	/*
+		localStorage의 메서드
+
+		1 setItem
+		localStorage에 데이터를 저장한다
+
+		2 getItem
+		localStorage에서 데이터를 가져온다
+
+		3 removeItem
+		localStorage에서 데이터를 삭제한다
+	*/
+
+
+	// 데이터 저장
+	localStorage.setItem("name", "치즈");
+
+	// 데이터 가져오기
+	var name = localStorage.getItem("name");
+
+	console.log(name);
+
+	// 데이터 삭제
+	localStorage.removeItem("name");
+</script> -->
+
 
 </body>
 </html>
