@@ -771,6 +771,323 @@
 	</script> -->
 
 
+  <!-- <h1>동적 버튼</h1>
+
+  <input type="text" name="" id="input">
+  <button id="btn" disabled>Send</button>
+
+
+  <script>
+    var input = document.getElementById("input");
+    var btn = document.getElementById("btn");
+
+    // keyup 이벤트 - 특정 키에서 손을 뗐을 때 발생한다
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      console.log("댓글:", this.value);
+
+      if (this.value == "") { // 댓글을 입력하지 않았을 때 ("": 빈문자열)
+        btn.disabled = true; // 버튼 비활성화
+      } else { // 댓글을 입력했을 때
+        btn.disabled = false // 버튼 활성화
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>실시간 유효성 검사</h1>
+
+  <style>
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    #input {
+      width: 20rem;
+      box-sizing: border-box;
+      padding: 0.5rem;
+    }
+
+    .success {
+      color: #0a0;
+    }
+
+    .warning {
+      color: #f00;
+    }
+  </style>
+  
+
+  <label for="input">Password</label>
+  <input type="text" id="input">
+
+  <p id="message"></p>
+
+
+  <script>
+    var input = document.getElementById('input');
+    var message = document.getElementById("message");
+    // 문자열이 소문자를 포함하는지 검사하기 위한 패턴
+    var lowerCasePatt = /[a-z]/
+    // 문자열이 대문자를 포함하는지 검사하기 위한 패턴
+    var upperCasePatt = /[A-Z]/
+    // 문자열이 숫자를 포함하는지 검사하기 위한 패턴
+    var numberPatt = /[0-9]/
+
+    /* 
+      정규식 (Regular Expression)
+      문자열을 검사하기 위한 패턴
+      검사를 이행하기 위한 몇가지 메서드를 가지고 있다
+
+      1 값
+      /패턴/
+
+      2 메서드
+      test(검사할 문자열) - 검사결과를 Boolean 으로 리턴한다
+    */
+
+    
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      var password = this.value;
+
+      console.log("비밀번호:", password);
+
+      // 유효성 검사 시작
+      try {
+        // 비밀번호를 입력하지 않았을 때
+        if (!password) {
+          throw "비밀번호는 필수입니다";
+        }
+
+        // 소문자를 포함하지 않은 경우
+        if (!lowerCasePatt.test(password)) {
+          throw "최소 한개 이상의 소문자를 포함하세요"
+        }
+
+        // 대문자를 포함하지 않은 경우
+        if (!upperCasePatt.test(password)) {
+          throw "최소 한개 이상의 대문자를 포함하세요"
+        }
+
+        // 숫자를 포함하지 않은 경우
+        if (!numberPatt.test(password)) {
+          throw "최소 한개 이상의 숫자를 포함하세요"
+        }
+
+        // 8글자 이하인 경우
+        if (password.length < 8) {
+          throw "비밀번호는 8글자 이상이어야 합니다"
+        }
+
+        // 모든 검사를 통과했을 때
+        message.innerHTML = `<span class="success">사용가능합니다</span>`;
+
+      } catch (error) {
+        // 예외 처리
+        message.innerHTML = `<span class="warning">${error}</span>`;
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>뉴스레터 구독</h1>
+
+  <style>
+    .container {
+      display: flex;
+    }
+
+    input {
+      padding: 0.5rem;
+      flex-grow: 1;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <form action="/server" id="form">
+    <div class="container">
+      <input type="text" name="email" placeholder="johnDoe@example.com">
+      <button class="btn">구독하기</button>
+    </div>
+  </form>
+
+  <p id="done" class="hidden">
+    구독해주셔서 감사합니다!
+  </p>
+
+
+  <script>
+    var form = document.getElementById("form");
+    var done = document.getElementById("done");
+    // 이메일 검사 패턴
+    var patt = /[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
+
+
+    // submit 이벤트 - 폼을 제출했을 때 발생한다
+    form.addEventListener("submit", handleSubmit);
+
+
+    function handleSubmit(e) {
+      // 서버 요청 취소
+      e.preventDefault();
+
+      /* 
+        이벤트의 preventDefault 메서드
+
+        이벤트의 기본 행위를 취소한다
+        submit 이벤트의 기본 행위는 서버에 요청을 전송하는 것이다
+        submit 이벤트의 기본 행위는 클라이언트 측 유효성 검사 또는
+        AJAX 요청시에 취소될 수 있다
+
+        * AJAX 요청 - 새로고침 없이 서버에 요청을 전송하는 기술
+      */
+
+
+      // 사용자가 입력한 이메일에 접근
+      var email = form.elements["email"].value;
+      // form.elements[name] - name으로 폼에 속한 엘리먼트에 접근할 수 있다
+
+      console.log("email:", email);
+
+      // 이메일 유효성 검사 시작
+      try {
+        if (!patt.test(email)) {
+          throw "올바른 이메일을 입력하세요";
+        }
+
+        // AJAX 요청..
+
+        // 검사 통과
+        form.classList.add("hidden"); // 폼을 숨기고
+        done.classList.remove("hidden"); // 땡큐 메시지를 보여준다
+
+      } catch (error) {
+        alert(error);
+      }
+    }
+
+  </script> -->
+
+
+  <h1>컨택 폼</h1>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+
+    .col-span-2 {
+      grid-column-start: span 2;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <form action="" id="form">
+    <div class="container">
+      <div class="form-group">
+        <label for="fname">이름</label>
+        <input type="text" id="fname" name="fname" placeholder="John">
+      </div>
+  
+      <div class="form-group">
+        <label for="lname">성</label>
+        <input type="text" id="lname" name="lname" placeholder="Doe">
+      </div>
+  
+      <div class="form-group col-span-2">
+        <label for="phone">핸드폰 번호</label>
+        <input type="text" name="phone" id="phone" placeholder="01012345678">
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="done" class="hidden">
+    곧 연락드리겠습니다
+  </p>
+
+  
+  <script>
+    var form = document.getElementById("form");
+    // 유효성 검사용 패턴
+    var fnamePatt = /^[a-zA-Z]+$/;
+    var lnamePatt = /^[a-zA-Z]+$/;
+    var phonePatt = /^\d{5,11}$/;
+
+    
+    form.addEventListener("submit", handleSubmit);
+
+
+    function handleSubmit(e) {
+      // 서버 요청 취소
+      e.preventDefault();
+
+      // 사용자가 입력한 값에 접근
+      var fname = form.elements["fname"].value;
+      var lname = form.elements["lname"].value;
+      var phone = form.elements["phone"].value;
+
+
+      // 유효성 검사 시작
+
+      try {
+        // 이름 검사
+        if (!fnamePatt.test(fname)) {
+          throw "올바른 이름을 입력하세요"
+        }
+
+        // 성 검사
+        if (!lnamePatt.test(lname)) {
+          throw "올바른 성을 입력하세요"
+        }
+
+        // 폰 검사
+        if (!phonePatt.test(phone)) {
+          throw "올바른 핸드폰 번호를 입력하세요"
+        }
+
+        // 검사 통과
+        form.classList.add("hidden");
+        done.classList.remove("hidden");
+        
+      } catch (error) {
+        alert(error)
+      }
+    };
+  </script>
+
+
+
 </body>
 
 </html>
