@@ -976,7 +976,7 @@
   </script> -->
 
 
-  <h1>컨택 폼</h1>
+  <!-- <h1>컨택 폼</h1>
 
   <style>
     .container {
@@ -1079,14 +1079,432 @@
         // 검사 통과
         form.classList.add("hidden");
         done.classList.remove("hidden");
-        
+
       } catch (error) {
         alert(error)
       }
     };
-  </script>
+  </script> -->
 
 
+  <!-- <h1>갤러리</h1>
+
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    #display {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+    
+    .collection {
+      /* size */
+      width: 300px;
+      height: 100px;
+      /* layout */
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .photo {
+      /* size */
+      width: 100%;
+      height: 100%;
+      /* misc */
+      object-fit: cover;
+      /* effect */
+      opacity: 0.8;
+    }
+
+    .prev-btn, .next-btn {
+      /* position */
+      position: absolute;
+      height: 100%;
+      top: 0;
+      /* design */
+      padding: 0.75rem;
+      border: none;
+      background-color: transparent;
+      color: rgba(255 255 255 / 0.5);
+      font-size: 2rem;
+    }
+
+    .prev-btn {
+      left: 0;
+    }
+
+    .next-btn {
+      right: 0;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  </style>
+
+ 
+  <div class="container">
+    <img src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="display">
+    <button class="prev-btn" onclick="step(-1)">&#10094;</button>
+    <button class="next-btn" onclick="step(1)">&#10095;</button>
+  </div>
+  
+  <div class="collection">
+    <img class="photo active" src="https://tvvmvn.github.io/front-end/img/Simba.webp" onclick="jump(0)" alt="">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" onclick="jump(1)" alt="">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" onclick="jump(2)" alt="">
+  </div>
+
+
+  <script>
+    var photos = document.getElementsByClassName("photo");
+    var display = document.getElementById("display");
+    var firstIndex = 0;
+    var lastIndex = photos.length - 1; // 2
+    var index = 0;
+
+    // 버튼 클릭
+    function step(data) {
+      index += data;
+
+      // index가 0과 2사이의 값만 가지게 만든다
+      if (index < firstIndex) index = lastIndex;
+      if (index > lastIndex) index = firstIndex;
+
+      console.log("index:", index);
+
+      main();
+    }
+
+    // 썸네일 클릭
+    function jump(data) {
+      index = data;
+
+      console.log("index:", index);
+
+      main();
+    }
+
+    // 메인
+    function main() {
+      // 디스플레이 이미지 업데이트
+      display.src = photos[index].src;
+
+      // 선택된 이미지에 active 클래스 추가
+      for (var i = 0; i < photos.length; i++) {
+        // i: 각 썸네일의 고유한 인덱스, index: 변하는 값
+        if (i == index) {
+          photos[i].classList.add("active");
+        } else {
+          photos[i].classList.remove("active");
+        }
+      }
+    }
+  </script> -->
+
+
+  <!-- <h1>자동 앨범</h1>
+
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    #display {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+    
+    .collection {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    .active {
+      outline: 4px solid #fff;
+      z-index: 1;
+    }
+  </style>
+  
+ 
+  <div class="container">
+    <img src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="" id="display">
+
+    <div class="collection">
+      <img class="photo active" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+    </div>
+  </div>
+
+
+  <script>
+    var photos = document.getElementsByClassName("photo");
+    var display = document.getElementById("display");
+    var index = 0;
+
+    setInterval(main, 3000);
+
+    function main() {
+      index++;
+
+      // index가 0과 2사이의 값을 갖도록 한다
+      if (index > 2) index = 0;
+
+      console.log("index:", index);
+
+      // 디스플레이 이미지 업데이트
+      display.src = photos[index].src;
+
+      // active클래스 조절
+      for (var i = 0; i < photos.length; i++) {
+        if (i == index) {
+          photos[i].classList.add("active");
+        } else {
+          photos[i].classList.remove("active");
+        }
+      }
+    }
+
+  </script> -->
+
+
+  <!-- <h1>Carousel</h1>
+
+  <style>
+    #carousel {
+      /* size */
+      width: 200px;
+      height: 200px;
+      /* position */
+      position: relative;
+      /* misc */
+      overflow-x: hidden;
+    }
+
+    #container {
+      /* size */
+      width: 600px;
+      /* layout */
+      display: flex;
+      /* misc */
+      transition: transform 0.2s;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    #prev-btn, #next-btn {
+      /* position */
+      position: absolute;
+      top: 0;
+      height: 100%;
+      /* design */
+      background-color: transparent;
+      border: none;
+      color: rgba(255 255 255 / 0.5);
+      font-size: 2rem;
+    }
+
+    #prev-btn {
+      left: 0;
+    }
+
+    #next-btn {
+      right: 0;
+    }
+
+    .indicator {
+      /* position */
+      position: absolute;
+      bottom: 12px;
+      width: 100%;
+      /* layout */
+      display: flex;
+      justify-content: center;
+    }
+
+    .dot {
+      /* design */
+      display: block;
+      background-color: #fff;
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      margin: 0 2px;
+      /* effect */
+      opacity: 0.5;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  </style>
+
+  <div id="carousel">
+    <div id="container">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="">
+      <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="">
+    </div>
+
+    <button id="prev-btn" class="hidden" onclick="main(-1)">&#10094;</button>
+    <button id="next-btn" onclick="main(1)">&#10095;</button>
+
+    <div class="indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+
+  <script>
+    // container and photos
+    var carousel = document.getElementById('carousel');
+    var container = document.getElementById('container');
+    var photos = document.getElementsByClassName("photo");
+    var imageWidth = 200;
+    // index, x
+    var firstIndex = 0;
+    var lastIndex = photos.length - 1; // 2
+    var index = 0;
+    var x = 0;
+    // buttons
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    // indicator
+    var dots = document.getElementsByClassName('dot');
+
+    function main(data) {
+      index += data;
+      x = -(index * imageWidth);
+
+      console.log(`index: ${index}, x: ${x}`);
+
+      // 컨테이너 이동
+      container.style.transform = `translateX(${x}px)`;
+
+      // 버튼 조절
+
+      // 이전버튼 - 첫번째 이미지일 때 숨긴다
+      if (index == firstIndex) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+
+      // 다음 버튼 - 마지막 이미지일 때 숨긴다
+      if (index == lastIndex) {
+        nextBtn.classList.add('hidden');
+      } else {
+        nextBtn.classList.remove('hidden');
+      }
+
+      // indicator
+      for (var i = 0; i < dots.length; i++) {
+        // i: 각 dot의 고유한 인덱스
+        if (i == index) {
+          dots[i].classList.add('active');
+        } else {
+          dots[i].classList.remove('active');
+        }
+      }
+    }
+  </script> -->
+
+  <!-- <h1>모달</h1>
+
+  <style>
+    #overlay {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* design */
+      background-color: rgba(0 0 0 / 0.2);
+    }
+
+    .modal {
+      /* layout */
+      width: 20rem;
+      margin: 100px auto 0;
+      /* design */
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <button id="btn">Open</button>
+
+  <div id="overlay" class="hidden">
+    <div class="modal">
+      <h1>Heading</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Quod, asperiores quam? 
+        Porro, sit cum maiores odio reprehenderit ea, 
+        molestiae quibusdam iusto eos, 
+        id molestias quas ipsam temporibus quo quam distinctio!
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var btn = document.getElementById("btn");
+
+    // 열기 버튼 클릭
+    btn.addEventListener("click", function () {
+      overlay.classList.remove("hidden");
+    })
+
+    // 오버레이 클릭
+    overlay.addEventListener("click", function (e) {
+
+      // overlay - 클릭 이벤트 감지가 가능한 영역
+      // e.target - 이벤트가 실제로 발생한 엘리먼트
+      console.log(e.target);
+
+      // 클릭한 지점이 모달을 제외한 부분일 때
+      if (e.target == this) {
+        this.classList.add("hidden");
+      }
+    })
+  </script> -->
 
 </body>
 
