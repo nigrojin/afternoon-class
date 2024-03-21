@@ -1506,6 +1506,412 @@
     })
   </script> -->
 
+
+  <!-- <h1>모달 갤러리</h1>
+
+  <style>
+    #overlay {
+      /* position */
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      /* design */
+      background-color: rgba(0 0 0 / 0.8);
+    }
+
+    .modal {
+      /* layout */
+      margin: 100px auto 0;
+      display: block;
+      /* size */
+      width: 300px;
+      height: 300px;
+    }
+    
+    #modal-image {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    #caption {
+      color: #fff;
+      text-align: center;
+    }
+
+    .collection {
+      display: flex;
+    }
+
+    .photo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .photo:hover {
+      opacity: 1;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+  
+
+  <div id="overlay" class="hidden">
+    <div class="modal">
+      <img id="modal-image" src="" alt="">
+      <h3 id="caption"></h3>
+    </div>
+  </div>
+  
+  <div class="collection">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Simba.webp" alt="Simba" onclick="openModal(0)">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Timon.webp" alt="Timon" onclick="openModal(1)">
+    <img class="photo" src="https://tvvmvn.github.io/front-end/img/Pumbaa.webp" alt="Pumba" onclick="openModal(2)">
+  </div>
+
+
+  <script>
+    var overlay = document.getElementById("overlay");
+    var modalImage = document.getElementById("modal-image");
+    var photos = document.getElementsByClassName("photo");
+    var caption = document.getElementById("caption");
+
+    
+    // 썸네일을 클릭했을 때
+    function openModal(index) {
+      // 특정 썸네일에 접근하기 위한 인덱스
+      console.log("index:", index);
+
+      // 썸네일의 소스와 설명(alt)를 모달에 전달한다
+      modalImage.src = photos[index].src;
+      caption.textContent = photos[index].alt;
+
+      // 모달을 나타나게한다
+      overlay.classList.remove("hidden");
+    }
+
+    
+    // 오버레이를 클릭했을 때
+    overlay.addEventListener("click", function () {
+      // 모달을 숨긴다
+      this.classList.add("hidden");
+    })
+  </script> -->
+
+
+  <!-- <h1>아코디언</h1>
+
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      margin-bottom: 0.25rem;
+    }
+
+    .btn {
+      /* layout */
+      display: flex;
+      justify-content: space-between;
+      /* size */
+      width: 100%;
+      /* design */
+      padding: 0.5rem;
+      background-color: #eee;
+      border: none;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .btn::after {
+      content: "+";
+    }
+
+    .active .btn::after {
+      content: "-";
+    }
+
+    .content {
+      max-height: 0;
+      /* 넘치는 텍스트를 숨긴다 */
+      overflow: hidden;
+      transition: max-height 0.2s;
+    }
+
+    .active .content {
+      max-height: 200px;
+    }
+  </style>
+  
+
+  <ul>
+    <li class="item">
+      <button class="btn" onclick="openContent(0)">Guinness</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. Dolor.
+        </p>
+      </div>
+    </li>
+
+    <li class="item">
+      <button class="btn" onclick="openContent(1)">Heineken</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. 
+        </p>
+      </div>
+    </li>
+
+    <li class="item">
+      <button class="btn" onclick="openContent(2)">Budwiser</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    function openContent(index) {
+      // index - 특정 메뉴에 접근하기 위한 인덱스
+      items[index].classList.toggle("active");
+    }
+  </script> -->
+
+
+  <!-- <h1>검색기록 삭제</h1>
+
+  <style>
+    input {
+      width: 100%;  
+      padding: 0.5rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 0.5rem;
+    }
+    
+    .item {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .delete-btn {
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <input type="search" placeholder="Search Google" disabled>
+
+  <ul>
+    <li class="item">
+      <span>I believe I can fly</span>
+      <span class="delete-btn" onclick="deleteItem(0)">&times;</span>
+    </li>
+    <li class="item">
+      <span>I believe I can touch the sky</span>
+      <span class="delete-btn" onclick="deleteItem(1)">&times;</span>
+    </li>
+    <li class="item">
+      <span>I think about it every night and day</span>
+      <span class="delete-btn" onclick="deleteItem(2)">&times;</span>
+    </li>
+    <li class="item"> 
+      <span>Spread my wings and fly away</span>
+      <span class="delete-btn" onclick="deleteItem(3)">&times;</span>
+    </li>
+  </ul>
+
+  <script>
+    var items = document.getElementsByClassName("item");
+    
+    function deleteItem(index) {
+      // index - 특정 아이템(검색 기록) 접근용
+      items[index].classList.add("hidden");
+    }
+  </script> -->
+
+
+  <!-- <h1>필터 기능</h1>
+
+  <style>
+    .btn-group {
+      display: inline-flex;
+    }
+
+    input {
+      display: none;
+    }
+
+    .btn {
+      padding: 0.5rem 0.75rem;
+    }
+
+    input:checked + .btn {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <div class="btn-group">
+    <input type="radio" name="car" id="all" checked>
+    <label for="all" class="btn" onclick="f('all')">
+      전체
+    </label>
+    <input type="radio" name="car" id="kr">
+    <label for="kr" class="btn" onclick="f('kr')">
+      한국
+    </label>
+    <input type="radio" name="car" id="jp">
+    <label for="jp" class="btn" onclick="f('jp')">
+      일본
+    </label>
+    <input type="radio" name="car" id="se">
+    <label for="se" class="btn" onclick="f('se')">
+      스웨덴
+    </label>
+  </div>
+
+  <ul>
+    <li class="item kr">Hyundai</li>
+    <li class="item kr">Kia</li>
+    <li class="item jp">Toyota</li>
+    <li class="item jp">Honda</li>
+    <li class="item jp">Lexus</li>
+    <li class="item se">Volvo</li>
+  </ul>
+
+
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    function f(filter) {
+      console.log("filter:", filter);
+
+      for (var i = 0; i < items.length; i++) {
+        // 각 아이템
+        var item = items[i];
+
+        if (filter  == 'all') { // 전체보기 인 경우
+          // 모든 아이템을 나타나게 한다
+          item.classList.remove("hidden");
+        } else { // 전체보기가 아닌 경우
+          if (item.classList.contains(filter)) { // 아이템이 필터를 포함하는 경우
+            item.classList.remove("hidden"); // 아이템을 나타나게 한다
+          } else { // 아이템이 필터를 포함하지 않는 경우
+            item.classList.add("hidden"); // 아이템을 숨긴다
+          }
+        }
+      }
+    }
+  </script> -->
+
+
+  <style>
+    .btn-group {
+      display: inline-flex;
+    }
+
+    input {
+      display: none;
+    }
+
+    .btn {
+      padding: 0.5rem 0.75rem;
+    }
+
+    input:checked + .btn {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <h1>Tab Contents</h1>
+
+  <div class="btn-group">
+    <input type="radio" name="car" id="kr" checked>
+    <label for="kr" class="btn" onclick="f('kr')">
+      Korea
+    </label>
+    <input type="radio" name="car" id="jp">
+    <label for="jp" class="btn" onclick="f('jp')">
+      Japan
+    </label>
+    <input type="radio" name="car" id="se">
+    <label for="se" class="btn" onclick="f('se')">
+      Sweden
+    </label>
+  </div>
+
+  <div>
+    <p class="item kr">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Aliquam iste accusantium maiores ab obcaecati, exercitationem fuga? 
+      Dolores, debitis repudiandae laudantium necessitatibus nemo quae 
+      placeat cumque voluptatibus recusandae fuga a libero?
+    </p>
+    <p class="item hidden jp">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Aliquam iste accusantium maiores ab obcaecati, exercitationem fuga? 
+    </p>
+    <p class="item hidden se">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    </p>
+  </div>
+
+
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    function f(filter) {
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].classList.contains(filter)) {
+          items[i].classList.remove("hidden");
+        } else {
+          items[i].classList.add("hidden");
+        }
+      }
+    }
+  </script>
+
+
+
 </body>
 
 </html>

@@ -33,6 +33,12 @@ github.com/nigrojin
 3. 1000px * 0.2 = 200px
 
 
+심바 0
+티몬 1
+품바 2
+
+index = 2 -> 품바에 active
+index = 0 -> 심바에 active
 
 
 
